@@ -100,6 +100,98 @@ Henrik Hansen
 \end_layout
 
 \begin_layout Section
+Outline
+\end_layout
+
+\begin_layout Enumerate
+Grossman model
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The original model
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Discrete vs continous time:
+\end_layout
+
+\begin_layout Enumerate
+Consumption vs investment model:
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The newer extensions
+\end_layout
+
+\begin_layout Enumerate
+The accumulation of problems
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Healthy people lose more health:
+\end_layout
+
+\begin_layout Enumerate
+Infinite lives.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Health Deficit Model
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Mitnitski and the frailty model
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Reliability theory and complex systems
+\end_layout
+
+\begin_layout Enumerate
+Humans as machines: Complexity makes health an emergent property
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+We are like machines made up of redundant components, many of which are
+ defective right from the start
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dalgaard and the health deficit model
+\end_layout
+
+\begin_layout Enumerate
+Explaining paradoxes - Why microfoundations matter
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+There is no such thing as a morbidity-mortality paradox.
+\end_layout
+
+\begin_layout Enumerate
+Resurrecting the fetal-origins hypothesis:
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
 Notes about the model.
 \end_layout
 
@@ -113,6 +205,28 @@ literal "false"
 \end_inset
 
  they...
+\end_layout
+
+\begin_layout Standard
+Aging is defined in reliability theory as the increase in mortality risk,
+ i.e.
+ the probability of dying.
+\end_layout
+
+\begin_layout Standard
+The bathtub model suggests that humans have fourd stages.
+ First there is an infant stage with high mortality risk.
+ This starts at age .; a normal working stage with low mortality risk; and
+ a aging stage where mortality is increasing exponentially.
+\end_layout
+
+\begin_layout Itemize
+Economics: Health is like physical capital.
+ Biology: Health is like physical capital.
+\begin_inset Newline newline
+\end_inset
+
+Should we also change the capital accumulation equation in the Solow model?
 \end_layout
 
 \begin_layout Standard
