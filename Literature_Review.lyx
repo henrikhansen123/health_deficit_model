@@ -88,7 +88,7 @@
 \begin_body
 
 \begin_layout Title
-When complexity is simpler
+What health is
 \begin_inset Newline newline
 \end_inset
 
@@ -104,41 +104,33 @@ Outline
 \end_layout
 
 \begin_layout Enumerate
-Grossman model
+Introduction
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-The original model
+Hook: The predictions of the Grossman model are wrong.
+\end_layout
+
+\begin_layout Enumerate
+Why a new theory is needed.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Discrete vs continous time:
+The wrong predictions of the Grossman model
 \end_layout
 
 \begin_layout Enumerate
-Consumption vs investment model:
+A good theory should be able to explain the 3 mortality laws
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Gompertz law: The logarithm of mortality rates increases linear with age.
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-The newer extensions
-\end_layout
-
-\begin_layout Enumerate
-The accumulation of problems
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Healthy people lose more health:
-\end_layout
-
-\begin_layout Enumerate
-Infinite lives.
-\end_layout
-
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
@@ -147,50 +139,269 @@ Health Deficit Model
 
 \begin_deeper
 \begin_layout Enumerate
-Mitnitski and the frailty model
+Microfoundations
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Reliability theory and complex systems
-\end_layout
-
-\begin_layout Enumerate
-Humans as machines: Complexity makes health an emergent property
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Quotes eld
-\end_inset
-
-We are like machines made up of redundant components, many of which are
- defective right from the start
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Dalgaard and the health deficit model
-\end_layout
-
-\begin_layout Enumerate
-Explaining paradoxes - Why microfoundations matter
+Reliability theory
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-There is no such thing as a morbidity-mortality paradox.
+What reliability theory is: Reliability theory is a sub-discipline of systems
+ engineering (the study of how to engineer complex systems over their life-cycle
+) that focuses on how long a system can survive.
+ In reliability theory, a system is the interaction of individual components,
+ which can include machines and, in this literature review, humans.
 \end_layout
 
 \begin_layout Enumerate
-Resurrecting the fetal-origins hypothesis:
+What aging is: In reliability theory, a system is aging, if the probability
+ that it dies increases, i.e.
+ the mortality rate increases.
+ A system whose mortality rate isn't increasing is said to be non-aging.
+ A non-aging system is, however, not immortal, but it can only die by a
+ constant probability.
+ Importantly, reliability theory assumes that all the systems' components
+ are non-aging.
+\end_layout
+
+\begin_layout Enumerate
+Deriving the fundamental equations of reliability theory: Let 
+\begin_inset Formula $S\left(t\right)=P\left(T\geq t\right)$
+\end_inset
+
+ be the survival function, i.e.
+ the probability that the time of death 
+\begin_inset Formula $T$
+\end_inset
+
+ is beyond time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The mortality rate is defined as
+\begin_inset Formula 
+\begin{equation}
+\mu\left(t\right)=-\frac{dS_{t}}{S_{t}dt}=-\frac{d\ln S_{t}}{dt}.\label{eq:failure_rate}
+\end{equation}
+
+\end_inset
+
+An aging system is one where 
+\begin_inset Formula $\mu^{\prime}\left(t\right)>0$
+\end_inset
+
+, and a non-aging system is one where 
+\begin_inset Formula $\mu^{\prime}\left(t\right)=0$
+\end_inset
+
+.
+ It follows from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:failure_rate"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that the survival function for non-aging systems is exponential.
+ According to Gompertz law, the mortality rate must be exponential, such
+ that
+\begin_inset Formula 
+\begin{equation}
+\mu\left(t\right)=Re^{\alpha t}\label{eq:Gompertz_law}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $R,\alpha>0$
+\end_inset
+
+ are parameters.
+\end_layout
+
+\begin_layout Enumerate
+Redundancies of components: In reliability theory, every individual component
+ of a system is non-aging, but the system as whole is.
+ Aging is an emerging property, which is explained by the breakdown of redundanc
+ies of components.
+ Let 
+\begin_inset Formula $q=1-p$
+\end_inset
+
+ denote the probability that a component fails, and 
+\begin_inset Formula $n$
+\end_inset
+
+ be the number of components.
+ If 
+\begin_inset Formula $n=2$
+\end_inset
+
+ and 
+\begin_inset Formula $q=0.5$
+\end_inset
+
+, then the probability that the system fails, 
+\begin_inset Formula $Q$
+\end_inset
+
+, is 
+\begin_inset Formula $Q=q^{n}=\left(1-p\right)^{n}=0.5^{2}=0.25$
+\end_inset
+
+.
+ The survival rate is then 
+\begin_inset Formula $S\left(t\right)=1-Q=1-\left(1-p\right)^{n}=0.75$
+\end_inset
+
+.
+ However, since every component doesn't age, then 
+\begin_inset Formula $p=e^{-kt}$
+\end_inset
+
+, where 
+\begin_inset Formula $k$
+\end_inset
+
+ is some constant.
+ From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:failure_rate"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ I then have that
+\begin_inset Formula 
+\begin{equation}
+\mu\left(t\right)=\frac{nke^{-kt}\left(1-e^{-kt}\right)^{n-1}}{1-\left(1-e^{-kt}\right)^{n}}.\label{eq:mortality_rate_biology}
+\end{equation}
+
+\end_inset
+
+For a low 
+\begin_inset Formula $t$
+\end_inset
+
+ this is approximately 
+\begin_inset Formula $\mu\left(t\right)\approx nk^{n}t^{n-1}$
+\end_inset
+
+, as 
+\begin_inset Formula $e^{-kt}\approx1-kt$
+\end_inset
+
+ at 
+\begin_inset Formula $t$
+\end_inset
+
+ around 
+\begin_inset Formula $0$
+\end_inset
+
+, but for high 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $\mu\left(t\right)\approx k$
+\end_inset
+
+, as 
+\begin_inset Formula $e^{-kt}\approx0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+How it can explain the 3 mortality laws
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Frailty index
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The basic model
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Reviewing the papers (Make each component of the health deficit model have
+ its own section)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Initial damage/ Makeham term/ Investment in health
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Fetal-origins hypothesis
+\end_layout
+
+\begin_layout Enumerate
+Hungry children age faster
+\end_layout
+
+\begin_layout Enumerate
+Education
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Compensating law of mortality
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Morbidity-mortality paradox
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The Gompertz term
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Occupational choice, aging and longevity
+\end_layout
+
+\begin_layout Enumerate
+Smoking kills
 \end_layout
 
 \end_deeper
 \end_deeper
+\begin_layout Enumerate
+Discussion and future work
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Causality???
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
 \begin_layout Section
 Notes about the model.
 \end_layout
@@ -214,7 +425,7 @@ Aging is defined in reliability theory as the increase in mortality risk,
 \end_layout
 
 \begin_layout Standard
-The bathtub model suggests that humans have fourd stages.
+The bathtub model suggests that humans have four stages.
  First there is an infant stage with high mortality risk.
  This starts at age .; a normal working stage with low mortality risk; and
  a aging stage where mortality is increasing exponentially.
