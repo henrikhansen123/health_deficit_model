@@ -73,7 +73,7 @@
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style english
-\dynamic_quotes 0
+\dynamic_quotes 1
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -88,11 +88,7 @@
 \begin_body
 
 \begin_layout Title
-What health is
-\begin_inset Newline newline
-\end_inset
-
-- A literature review of the health deficit model
+The Health Deficit Model - A Literature Review
 \end_layout
 
 \begin_layout Author
@@ -100,65 +96,104 @@ Henrik Hansen
 \end_layout
 
 \begin_layout Section
-Outline
-\end_layout
-
-\begin_layout Enumerate
 Introduction
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-Hook: The predictions of the Grossman model are wrong.
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Reliability-theory"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ I will explain the reliability theory, as seen from the biological...
+ from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gavrilovReliabilityTheoryAging2005"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Background
+\end_layout
+
+\begin_layout Subsection
+The mortality laws
 \end_layout
 
 \begin_layout Enumerate
-Why a new theory is needed.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-The wrong predictions of the Grossman model
+Compertz-Makeham law: The mortality rate is increasing exponentially with
+ time.
 \end_layout
 
 \begin_layout Enumerate
-A good theory should be able to explain the 3 mortality laws
+Law of compensating mortality: Initial higher mortality rate is compensated
+ by a lower rate of mortality increase.
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
-Gompertz law: The logarithm of mortality rates increases linear with age.
+Law of late-life mortality plateau: Mortality rates stabilizes at late-life
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+implying that they don't age anymore at that point
 \end_layout
 
-\end_deeper
-\end_deeper
-\end_deeper
-\begin_layout Enumerate
-Health Deficit Model
+\end_inset
+
+.
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-Microfoundations
+\begin_layout Subsection
+Reliability theory 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Reliability-theory"
+
+\end_inset
+
+
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-Reliability theory
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What reliability theory is
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-What reliability theory is: Reliability theory is a sub-discipline of systems
- engineering (the study of how to engineer complex systems over their life-cycle
-) that focuses on how long a system can survive.
+\end_inset
+
+ Reliability theory is a sub-discipline of systems engineering (the study
+ of how to engineer complex systems over their life-cycle) that focuses
+ on how long a system can survive.
  In reliability theory, a system is the interaction of individual components,
  which can include machines and, in this literature review, humans.
 \end_layout
 
-\begin_layout Enumerate
-What aging is: In reliability theory, a system is aging, if the probability
- that it dies increases, i.e.
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What aging is
+\end_layout
+
+\end_inset
+
+ In reliability theory, a system is aging, if the probability that it dies
+ increases, i.e.
  the mortality rate increases.
  A system whose mortality rate isn't increasing is said to be non-aging.
  A non-aging system is, however, not immortal, but it can only die by a
@@ -167,8 +202,17 @@ What aging is: In reliability theory, a system is aging, if the probability
  are non-aging.
 \end_layout
 
-\begin_layout Enumerate
-Deriving the fundamental equations of reliability theory: Let 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Deriving the fundamental equations of reliability theory
+\end_layout
+
+\end_inset
+
+ Let 
 \begin_inset Formula $S\left(t\right)=P\left(T\geq t\right)$
 \end_inset
 
@@ -226,9 +270,18 @@ where
  are parameters.
 \end_layout
 
-\begin_layout Enumerate
-Redundancies of components: In reliability theory, every individual component
- of a system is non-aging, but the system as whole is.
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Redundancies of components:
+\end_layout
+
+\end_inset
+
+ In reliability theory, every individual component of a system is non-aging,
+ but the system as whole is.
  Aging is an emerging property, which is explained by the breakdown of redundanc
 ies of components.
  Let 
@@ -324,90 +377,27 @@ For a low
 
 \end_layout
 
-\begin_layout Enumerate
-How it can explain the 3 mortality laws
+\begin_layout Subsubsection
+High Initial Damage Load
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
+\begin_layout Subsection
 Frailty index
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-The basic model
-\end_layout
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "mitnitskiAccumulationDeficitsProxy2001"
+literal "false"
 
-\end_deeper
-\begin_layout Enumerate
-Reviewing the papers (Make each component of the health deficit model have
- its own section)
-\end_layout
+\end_inset
 
-\begin_deeper
-\begin_layout Enumerate
-Initial damage/ Makeham term/ Investment in health
-\end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-Fetal-origins hypothesis
-\end_layout
-
-\begin_layout Enumerate
-Hungry children age faster
-\end_layout
-
-\begin_layout Enumerate
-Education
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Compensating law of mortality
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Morbidity-mortality paradox
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-The Gompertz term
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Occupational choice, aging and longevity
-\end_layout
-
-\begin_layout Enumerate
-Smoking kills
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Enumerate
-Discussion and future work
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Causality???
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Conclusion
-\end_layout
-
-\begin_layout Section
-Notes about the model.
 \end_layout
 
 \begin_layout Standard
-In 
+The paper 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "mitnitskiAccumulationDeficitsProxy2001"
@@ -415,29 +405,1474 @@ literal "false"
 
 \end_inset
 
- they...
-\end_layout
-
-\begin_layout Standard
-Aging is defined in reliability theory as the increase in mortality risk,
+ focuses on how to determine biological age from what they call “deficits”,
  i.e.
- the probability of dying.
-\end_layout
+ signs, symptoms, diseases, etc.
+ They do this, because chronological age is not a good predictor of biological
+ age, as humans are heterogeneous in their mortality rate at any level of
+ chronological age.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsProxy2001"
+literal "false"
 
-\begin_layout Standard
-The bathtub model suggests that humans have four stages.
- First there is an infant stage with high mortality risk.
- This starts at age .; a normal working stage with low mortality risk; and
- a aging stage where mortality is increasing exponentially.
-\end_layout
-
-\begin_layout Itemize
-Economics: Health is like physical capital.
- Biology: Health is like physical capital.
-\begin_inset Newline newline
 \end_inset
 
-Should we also change the capital accumulation equation in the Solow model?
+ create a frailty index, that is the number of deficits a person has, divided
+ by total number of potential deficits.
+ The frailty index is a proxy for biological age.
+ They find that the frailty index follows a Gamma-distribution for a representat
+ive sample of old Canadians.
+ This relates to the reliability theory of biological aging, because the
+ Gamma-distribution is what you find systems with many redundancies.
+ The reason for this is that while….
+ While 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsProxy2001"
+literal "false"
+
+\end_inset
+
+ proxy for aging does find a strong exponential relationship between age
+ and frailty of 3.3% increase in the frailty index each year, they, however,
+ 2194 older individuals.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+ they extend their analysis for the frailty index to include many different
+ age groups and gender for a larger sample.
+\end_layout
+
+\begin_layout Standard
+They find that while women are more frail, i.e.
+ they have a higher frailty index, they, compared to men, have a lower force
+ of mortality, i.e.
+ they don’t age as fast as men.
+ They call this relationship the Compensation Law of Frailty, which is akin
+ to the Compensation Law of Mortality from gerontology.
+\end_layout
+
+\begin_layout Standard
+They use this relationship to determine, from the frailty index, the Species-Spe
+cific life-span, i.e.
+ at what age the two curves of frailty accumulation intersect.
+ The estimate yields a life-span of 94 (SE=1), which is almost the same,
+ 95 (SE=1) as found when looking at mortality rates.
+ This almost one-to-one relationship between estimating life-span from mortality
+ rates and frailty indices imply that mortality rates can be proxied as
+ the accumulation of deficits.
+\end_layout
+
+\begin_layout Standard
+This is also what would be expected from reliability theory, because this
+ theory implies that aging (increase in mortality rates) is the decumulation
+ of redundancy.
+ And more deficits would in this context be the bodily expression of the
+ loss of redundancy of parallel structures 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gavrilovReliabilityTheoryAging2005"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Health Deficit Model
+\end_layout
+
+\begin_layout Subsection
+Theoretical framework
+\end_layout
+
+\begin_layout Standard
+The Health Deficit Model is a micro-founded alternative to the Grossman-model
+ of health capital.
+ The Health Deficit Model is micro-founded on reliability theory, which
+ states that biological aging is the increase in mortality rates caused
+ by the reduction of biological redundancies.
+ In an extreme example, if each kidney have a 50% chance of failure each
+ period, and the individual dies if both kidneys fail, then the mortality
+ rate 
+\begin_inset Formula $25\%=2\cdot50\%$
+\end_inset
+
+.
+ The individual is only getting older when the first kidney fails, and the
+ individual dies when both kidneys has failed.
+\end_layout
+
+\begin_layout Standard
+The key equation of the Health Deficit Model comes from the ideas of the
+ frailty index by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsProxy2001"
+literal "false"
+
+\end_inset
+
+, and is as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+D\left(t\right)=E+Be^{\mu t},\label{eq:Health Deficit Accumulation}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $D\left(t\right)$
+\end_inset
+
+ is the accumulated deficits at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $E$
+\end_inset
+
+ is the Makeham-term, and corresponds to environmental and individual factors
+ of deficit accumulation, 
+\begin_inset Formula $B$
+\end_inset
+
+ is the Gompertz term, and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the aging rate.
+ As is clear from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Health Deficit Accumulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the deficits are increasing exponentially with time.
+ Excluding 
+\begin_inset Formula $E$
+\end_inset
+
+ from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Health Deficit Accumulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ leads to a constant growth rate of 
+\begin_inset Formula $\mu$
+\end_inset
+
+ deficits per time period 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ This is called the Gompertz law of mortality, and is often used empirically
+ to estimate biological aging and survival probabilities, because it yields
+ a log-linear relationship in age.
+ This can be seen from taking the log of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Health Deficit Accumulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\ln\left(D\left(t\right)\right)=r+\mu t,\label{eq:Gompertz-law}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $r=\ln\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To use equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Health Deficit Accumulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in life-cycle models, it is differentiated as
+\begin_inset Formula 
+\[
+\dot{D}\left(t\right)=\mu\left(Be^{\mu t}\right)=\mu\left(D\left(t\right)-E\right).
+\]
+
+\end_inset
+
+It is then assumed that 
+\begin_inset Formula $E=a+Ah\left(t\right)^{\gamma}$
+\end_inset
+
+, where 
+\begin_inset Formula $a$
+\end_inset
+
+ is exogenous changes in deficits due to the environment, 
+\begin_inset Formula $h\left(t\right)$
+\end_inset
+
+ is health investments at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $A>0$
+\end_inset
+
+ is the health technology, and 
+\begin_inset Formula $0<\gamma<1$
+\end_inset
+
+ is the returns to health investments.
+\end_layout
+
+\begin_layout Standard
+The Health Deficit Model (HDM) is defined as life-cycle models that uses
+ 
+\begin_inset Formula 
+\begin{equation}
+\dot{D}\left(t\right)=\mu\left(D\left(t\right)-a-Ah\left(t\right)^{\gamma}\right)\label{eq:Health Deficit Model}
+\end{equation}
+
+\end_inset
+
+for the evolution of health over the life-cycle.
+ Two important values need to be made about the HDM: Firstly, the value
+ of the initial deficits 
+\begin_inset Formula $D\left(0\right)$
+\end_inset
+
+, and secondly, the terminal condition 
+\begin_inset Formula $D\left(T\right)=\overline{D}$
+\end_inset
+
+, at which death occurs.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Estimates from mitnitski have shown that this terminal condition is at 
+\begin_inset Formula $0.7$
+\end_inset
+
+ by using the frailty index as deficit accumulations
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The various extensions of the model build on a intertemporal optimizing
+ representative individual with life-time utility according to 
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{T}\mathrm{e}^{-\rho t}u\left(c\left(t\right)\right)dt,\label{eq:life-time utility}
+\end{equation}
+
+\end_inset
+
+in which 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is the discount rate, 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+ is the consumption at time 
+\begin_inset Formula $t$
+\end_inset
+
+, and 
+\begin_inset Formula $u\left(.\right)$
+\end_inset
+
+ is the utility funtion.
+ The law of motion of capital is
+\begin_inset Formula 
+\begin{equation}
+\dot{k}\left(t\right)=w+rk\left(t\right)-c\left(t\right)-ph\left(t\right)\label{eq:Law of motion of capital}
+\end{equation}
+
+\end_inset
+
+in which 
+\begin_inset Formula $w$
+\end_inset
+
+ is the wage rate, 
+\begin_inset Formula $k\left(t\right)$
+\end_inset
+
+ is capital at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $r$
+\end_inset
+
+ is the rental rate of capital, and 
+\begin_inset Formula $p$
+\end_inset
+
+ is the price of health investments.
+\end_layout
+
+\begin_layout Standard
+The representative individual's problem is to maximize life-time utility,
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:life-time utility"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, subject to health deficit accumulation,
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Health Deficit Accumulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the law of motion of capital, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Law of motion of capital"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and initial- and terminal values of deficits 
+\begin_inset Formula $D$
+\end_inset
+
+ and capital 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+All the extensions of the model varies either equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:life-time utility"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Health Deficit Accumulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Law of motion of capital"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the initial/terminal conditions, or alternatively add an extra constraint.
+\end_layout
+
+\begin_layout Subsection
+Empirical findings
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+ answers the question of how Europeans age.
+ They use the Survey of Health, Aging and Retirement in Europe (SHARE) dataset
+ to estimate the relationship between health deficits and age using panel
+ data methods.
+ They are interested in whether they also find compensation in deficits
+ as predicted from the Law of Compensation Frailty 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mitnitskiAccumulationDeficitsProxy2001"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+By running random- and fixed effects regressions, they find a log-linear
+ relationship between age and deficit accumulation.
+ For men they find that they accumulate 2.6 percent more deficits each year.
+ For women it is 2.3 percent.
+\end_layout
+
+\begin_layout Standard
+However, using non-linear regressions, by including the Makeham term, they
+ find that the estimates increases to 7.3 percent for men, and 5.2 percent
+ for women.
+\end_layout
+
+\begin_layout Standard
+They also find a significant Makeham term, so that the log-specification
+ is biased.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHungryChildrenAge2018"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The fetal-origins literature have matured into a more developmental origins
+ literature.
+ Under-nutrition in early stages of life is bad.
+ This paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHungryChildrenAge2018"
+literal "false"
+
+\end_inset
+
+ show that hunger in childhood affects biological aging.
+ They estimate this from multiple waves of the Share Panel of European elderly.
+ Effects are smaller for men.
+ Also smaller from age 4-8.
+ Contemporary research have problem with explaining aging, such that mortality
+ follows the Gompertz-Makeham law.
+ Reliability can explain this by seing humans as a system with many redundancies.
+ The use a frailty index.
+ SHARE: Survey of Health, Aging, Retirement in Europe.
+ They use a log-linear regression strategy.
+ They find that childhood exposure to hunger leads to a 20% higher accumulation
+ of deficits in old age.
+ Using non-linear regressions, akin to the Gompertz-Makeham Law, they find
+ larger effects of hunger on aging.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskySeasonBirthHealth2020"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySeasonBirthHealth2020"
+literal "false"
+
+\end_inset
+
+ estimate health deficits for Europeans born on different months, to see
+ if there is seasonal variation in the accumulation of health deficits.
+ There is seasonal variation in a lot of diseases, for example diabetes
+ have been shown to be affected by the birth month.
+\end_layout
+
+\begin_layout Standard
+They find a correlation between the season of birth and health deficits.
+ Specifically, they find that men born in spring and summer are biologically
+ older than men born in the fall or winter.
+\end_layout
+
+\begin_layout Standard
+They also use a non-linear least square estimation strategy, and they find
+ also find the Makeham term to be 8 percent as they do in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+.
+ They further also find that 
+\begin_inset Formula $\widehat{\alpha}_{females}=0.057$
+\end_inset
+
+ and 
+\begin_inset Formula $\widehat{\alpha}_{males}=0.069$
+\end_inset
+
+.
+ They further also find that women are born with more deficits, but age
+ less fast than men.
+\end_layout
+
+\begin_layout Standard
+They don’t find an effect for women.
+\end_layout
+
+\begin_layout Standard
+    
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Does women also show seasonality?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The effect size is considerably low.
+\end_layout
+
+\begin_layout Standard
+They exclude Southern Europe from the regressions.
+\end_layout
+
+\begin_layout Standard
+This study is great for policy, because the natural experiments leads to
+ extreme changes in variation of pregnant women.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHealthAgingRetirement2020"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHealthAgingRetirement2020"
+literal "false"
+
+\end_inset
+
+ estimate the health deficit model on the SHARE-dataset where they allow
+ for different occupational-specific aging estimates.
+\end_layout
+
+\begin_layout Standard
+They find that blue collar workers accumulate deficits faster that white
+ collar workers, that blue collar workers have health benefits from retirement,
+ and that they still accumulate deficits faster after retirement compared
+ to white collar workers.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+ study the effects of social vulnerability on biological aging among the
+ elderly in the United States.
+\end_layout
+
+\begin_layout Standard
+There is a belief that societies have become more lonely and individualistic.
+ In his book ([Putnam, 2001](zotero://select/library/items/STTTFHJF)) argues
+ that ….
+\end_layout
+
+\begin_layout Standard
+However, as 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+ write:
+\end_layout
+
+\begin_layout Standard
+“The existence of a loneliness epidemic, however, is not corroborated by
+ scientific evidence.” 
+\begin_inset CommandInset citation
+LatexCommand citet
+after "page 1"
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They argue that this is due to the difference between objective- and subjective
+ loneliness.
+\end_layout
+
+\begin_layout Standard
+They use data from the Health and Retirement Study, out of which they create
+ a Social Vulnerability Index (SVI) and a frailty index (FI).
+ The data consists of 17602 elderly individuals.
+\end_layout
+
+\begin_layout Standard
+They create the SVI as they create the FI.
+ That is, they divide number of social deficits by total potential social
+ deficits.
+\end_layout
+
+\begin_layout Standard
+They find that the SVI is positively correlated with the FI.
+\end_layout
+
+\begin_layout Standard
+The effect of SVI on FI is not causal, and probably subject to reverse causality
+ if for example disabled individuals are socially vulnerably due to their
+ disability.
+\end_layout
+
+\begin_layout Subsection
+Theoretical findings
+\end_layout
+
+\begin_layout Subsubsection
+Occupational theories
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "caseBrokenWorkSex2005"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "caseBrokenWorkSex2005"
+literal "false"
+
+\end_inset
+
+ they examine how health is depreciating over the life-cycle.
+ They use self-reported health from the National Health Interview Survey
+ (NHIS).
+ A time-series plot show that self-reported health deteriorates with time.
+ They split up the sample by the bottom- and top quartile, and they find
+ that the bottom quartile decreases their health faster than the top quartile.
+ However, the self-reported health is unchanged for the bottom after age
+ 60, but still rising for the top quartile.
+ The two lines intersect at….
+\end_layout
+
+\begin_layout Standard
+They want to know how work affects health throughout the life-cycle.
+ They find that self-reported health decreases more rapidly for manual workers
+ in the labor force.
+ This is a problem for the basic Grossman-model, as this higher depreciation
+ would be fully offset by more investments in health.
+\end_layout
+
+\begin_layout Standard
+Women report lower health than men, despite them having a lower mortality
+ rate.
+ This is also called the mortality-morbidity paradox.
+\end_layout
+
+\begin_layout Standard
+Finding causal determinants of health is tricky, as it is subject to multiple
+ unobserved confounders.
+ They use the Grossman-model of health, but they criticize it for the unrealisti
+c assumption, that death is chosen, and that with a constant depreciation
+ of capital, the optimal chose is an infinite live.
+ They argue that the wrong assumption is that there exists a technology,
+ that can restore health.
+ Weakining that assumption
+\end_layout
+
+\begin_layout Standard
+A problem with the evidence is their use of self-reported health.
+ It has been shown [WHERE] that the correlation between latent health and
+ self-reported health is weak at best.
+ However, from a welfare analysis perspective, the health that is in the
+ utility function can only be the self-reported health.
+ Otherwise, they wouldn’t receive utility from it.
+\end_layout
+
+\begin_layout Standard
+Another problem is self-selection into manual work by health.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "dalgaardOptimalAgingDeath2014"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardOptimalAgingDeath2014"
+literal "false"
+
+\end_inset
+
+ they develop the Health Deficit Model, as an attempt to explain the Preston
+ Curve.
+ The Preston curve is the empirical observation, that, across countries,
+ there is a concave relationship between income and life-expectancy.
+\end_layout
+
+\begin_layout Standard
+The simple explanation for their model is that, if income increases, then
+ because of diminishing marginal utility per period, the individual wants
+ to smooth consumption, which it does by investing in health.
+ The health investment increases longevity.
+\end_layout
+
+\begin_layout Standard
+Using this they find that they can fit the Preston Curve with 80% accuracy.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "strulikHealthHump2015"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+According to the Permanent Income Hypothesis, a rational consumer should
+ smooth consumption over all periods to maximize life-time utility.
+ However, contrary to theory, the empirical consumption patterns exhibit
+ a hump at the middle of life.
+ Earlier explanations have included stuff like changing preferences and
+ bequest motives.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikHealthHump2015"
+literal "false"
+
+\end_inset
+
+ he makes a simple model of life-cycle consumption, where he incorporates
+ the health deficit model into the utility function.
+ Building on empirical evidence for the lower marginal utility from lower
+ health, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikHealthHump2015"
+literal "false"
+
+\end_inset
+
+ makes the following utility function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u\left(c,D\right)=D^{-\alpha}\cdot\tilde{u}\left(c\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This simple extension leads to a hump shaped consumption profile.
+ The intuition is as follows: Initially, the utility gain from saving is
+ higher than the utility loss from deficit accumulation.
+ However, as deficit accumulation increases, the utility loss eventually
+ gets larger and larger.
+ The utility is then maximized when
+\end_layout
+
+\begin_layout Standard
+    
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Strulik changes the life-time utility function, and simplifies the law of
+ motion of capital.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "dalgaardAccountingFetalOrigins2017"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardAccountingFetalOrigins2017"
+literal "false"
+
+\end_inset
+
+ gives another bash to the Grossman-model, for the inability to explain
+ the predictions of the Fetal Origins Hypothesis.
+ The Fetal Origins Hypothesis posits that early life events in utero affect
+ late-life outcomes.
+\end_layout
+
+\begin_layout Standard
+They explore the differences between the health deficit model and the Grossman
+ model (health capital model).
+ They find that, even if a person holds the health investment fixed, there
+ will, for any shock level, be total convergence in health levels.
+\end_layout
+
+\begin_layout Standard
+They assume an exogenous path of parental investment in health from birth
+ to year 20.
+ They find that a small 5 % less initial health at birth leads to a 6.7 years
+ earlier death.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+They use reliability theory, and the examples you have, to microfound aging.
+ They also show that health deficits are mirror image of redundancy destruction.
+     What about the Makeham-term, and that in ([Gavrilov and Gavrilova,
+ 2005](zotero://select/library/items/ISG9KDP8)) they need to make the HIDL
+ assumption.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+They change the HDI-equation to include a childhood-period.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "dalgaardGenesisGoldenAge2017"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardGenesisGoldenAge2017"
+literal "false"
+
+\end_inset
+
+, they use the health deficit model to examine why longevity has gone up
+ by 10 years from 1850-1940.
+ The life-cycle model they create includes the health deficit model as a
+ constraint.
+ The paper extends the basic model in ([Dalgaard and Strulik, 2014](zotero://sel
+ect/library/items/EYVXGDDF)) to examine optimal retirement, disutility from
+ work and changing wage rates due to health changes.
+\end_layout
+
+\begin_layout Standard
+Calibrating their model they find that the increase in longevity is mostly
+ due to increase in income.
+ This corresponds with the basic model of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardOptimalAgingDeath2014"
+literal "false"
+
+\end_inset
+
+.
+ Furthermore, they find that the increase in age of retirement is mostly
+ due to increases in health technologies.
+ The intuition for the first result is the same as in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Health Deficit Accumulation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The intuition for the second results is a follows: When health technologies
+ go up, the people age more slowly, which further decreases the disutility
+ from working, which increases the age of retirement.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+They add an equation for wages.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schunemannGenderGapMortality2017"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Life-time utility depends on health
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Women live longer than men --> gender gap.
+\end_layout
+
+\begin_layout Standard
+The gender gap is negatively associated with GDP per capita.
+\end_layout
+
+\begin_layout Standard
+However, women, at any age, are less healthy than men.
+\end_layout
+
+\begin_layout Standard
+Mitnitski’s frailty index can help explain this seemingly odd “paradox”.
+\end_layout
+
+\begin_layout Standard
+- Women start with more deficits, but accumulate less than men with age.
+ - This has a microfoundation in biology, based on reliability and redundancy
+ of body cells.
+ 
+\end_layout
+
+\begin_layout Standard
+Women die on average at an older age than men, so they must have accumulated
+ more deficits [really?]
+\end_layout
+
+\begin_layout Standard
+- Men are more likely to die than women, for any given deficits.
+ 
+\end_layout
+
+\begin_layout Standard
+Biological perspective:
+\end_layout
+
+\begin_layout Standard
+- Women suffer more from non-fatal conditions, that leads to lower self-reported
+ health, but doesn’t affect risk of death as much.
+ - They are also less likely to suffer from cardiovascular diseases (because
+ of estrogen).
+ 
+\end_layout
+
+\begin_layout Standard
+Behavioral perspective:
+\end_layout
+
+\begin_layout Standard
+- Women take less risks.
+ - They consume healthcare services more, - eat healthier, - use more prescripti
+on drugs, - utilize screenings more often.
+ 
+\end_layout
+
+\begin_layout Standard
+Many health studies on gender difference use self-reported health
+\end_layout
+
+\begin_layout Standard
+- Health-conscious women will report lower health.
+ - Status focused men will report higher health.
+ 
+\end_layout
+
+\begin_layout Standard
+Important: Both women and men suffer from the same diseases, but women at
+ a later age.
+\end_layout
+
+\begin_layout Standard
+- Women: Non-fatal deficits earlier in life, fatal deficits later at life.
+ - Can be explained by biology such as estrogen production, and behavior
+ (less smoking).
+ 
+\end_layout
+
+\begin_layout Standard
+This paper uses a theory-based approach to consider the gender gap in mortality,
+ namely the health deficit accumulation model.
+\end_layout
+
+\begin_layout Standard
+They calibrate their model for men and women separately.
+\end_layout
+
+\begin_layout Standard
+They then give the women the same preferences as men, and this reduces the
+ gender gap in lifespan from 4.6 to 1.4 years.
+\end_layout
+
+\begin_layout Standard
+86%-89% of the gender gap can be motivated by gender specific preferences
+ and behavior.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "strulikReturnEducationTerms2018"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikReturnEducationTerms2018"
+literal "false"
+
+\end_inset
+
+ he creates a life-cycle model of the effect of education on longevity,
+ by using the health deficit model.
+ In the model there is heterogenous returns to education, so individuals
+ choose educational level according to their return.
+ The new thing is that because health investments can increase longevity,
+ by decreasing the accumulation of health deficits, it can explain the positive
+ correlation between education and longevity.
+ As per period marginal utility is diminishing, it makes sense to increase
+ longevity to increase consumption at the longer life.
+ This implies that the causality goes from education to longevity, and not
+ the other way around.
+\end_layout
+
+\begin_layout Standard
+Strulik (2018) then calibrate his model with using the estimates from ([Mitnitsk
+i et al., 2002](zotero://select/library/items/QPF2A7M7)), which means that
+ individuals accumulate health deficits of around 3-4% each year.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Why doesn’t he do it with the higher non-linear estimates?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The calibrational choice of using age 16 is smart, because education is
+ exogenous before age 16, AND the health deficit model needs a further extension
+ to take into account the infant-mortality --> working period.
+\end_layout
+
+\begin_layout Standard
+When he writes about education causing longevity, it is really ability increasin
+g education increasing longevity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+- Healthy and unhealthy consumption.
+ - Utility - Deficits - Capital - Human capital in capital accumulation
+ - Human capital as extra constraint
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "dalgaardFetalOriginsLife2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardFetalOriginsLife2021"
+literal "false"
+
+\end_inset
+
+ they further develop their health deficit model to include the infant-mortality
+ period.
+ They use constraints from physics, together with biology, to model the
+ infant-mortality period as a period of increasing redundancy, i.e.
+ a decreasing deficit accumulation.
+ By during this modeling of the infant period, they can create the empirical
+ regularity known as the bathtub-curve of mortality 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "gavrilovReliabilityTheoryAging2005"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+They then run computer experiments by creating shocks of different magnitude
+ in the fetal state.
+ The experiments suggest that small shocks in utero leads to large differences
+ in longevity, i.e.
+ large differences in health deficits at late-life.
+\end_layout
+
+\begin_layout Standard
+In other words, they create a model that can encompass the Fetal Origins
+ Hypothesis.
+\end_layout
+
+\begin_layout Standard
+They develop the fetal period using the von Bertalanffy equation, which
+ is based on physical laws.
+ The equation basically states that human growth is high when the mass is
+ low, but the growth decreases in size.
+ They split the development of the human body into a in utero developmental
+ phase and a childhood developmental phase, which is distinguished by the
+ parameter on the change in the growth of the number of body cells, and
+ the energy needed to maintain a body cell.
+\end_layout
+
+\begin_layout Standard
+For the childhood development phase, the frailty index is convex in age,
+ in that the frailty index decreases from birth until age 7, and then increases
+ from there on.
+\end_layout
+
+\begin_layout Standard
+A problem with the model is the kink at age 20.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "strulikPainPatientJunkie2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikPainPatientJunkie2021"
+literal "false"
+
+\end_inset
+
+ he creates a model of imperfectly rational addiction, in which he incorporates
+ the health deficit model.
+ The model examines the behavior of two types of addiction: Rational addiction
+ and imperfect rational addiction.
+\end_layout
+
+\begin_layout Standard
+One of the strengths of the paper is its use behavioral assumptions, that
+ only makes addiction irrational, instead of assuming that all choices of
+ the agent is irrational like with time-inconsistent preferences.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+How does this paper relates to ([Alpert et al., 2022](zotero://select/library/ite
+ms/CMQZRINZ))?
+\end_layout
+
+\begin_layout Plain Layout
+- 
+\backslash
++ Law of motion of addictive capital - Change in HDI - Change in Capital
+ accumulation - Change in utility
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "strulikHookedWeightControl2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikHookedWeightControl2021"
+literal "false"
+
+\end_inset
+
+ creates an economic model of anorexia, and evaluates the effect of anorexia
+ on longevity by using the health deficit model.
+ In the model, deviations from ideal objective bodyweight increases health
+ deficits, while deviations from subjective target weight decreases utility.
+ The subjective target weight is the individual’s reference point for body
+ weight.
+\end_layout
+
+\begin_layout Standard
+Anorexics are individuals who perpetually decreases their reference point,
+ so that they consume less and less food, which increases their health deficit
+ accumulation.
+ They in a sense becomes addicted to weight loss.
+\end_layout
+
+\begin_layout Standard
+The addiction way of understanding anorexia is not controversial in the
+ health literature, which makes anorexia a candidate concept to examine
+ through the lens of the addiction-deficit models of Strulik.
+\end_layout
+
+\begin_layout Standard
+Calibration of the model begins at a body mass index at 28, and then gradually
+ decreases it down to 15.
+ The counterfactual computer experiment predicts that anorexics lose 21
+ years of age through their life.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Shouldn’t the models also have a health deficit of 0.7 at age 101 (the life-span
+ of humans).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Explaining paradoxes
+\end_layout
+
+\begin_layout Subsection
+Future directions
+\end_layout
+
+\begin_layout Section
+Conclusion
 \end_layout
 
 \begin_layout Standard
