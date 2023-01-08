@@ -55,6 +55,21 @@
 \justification true
 \use_refstyle 1
 \use_minted 0
+\branch Outline
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Reliability theory
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch To do
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -83,6 +98,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author 31028646 "henrik"
 \end_header
 
 \begin_body
@@ -95,64 +111,252 @@ The Health Deficit Model - A Literature Review
 Henrik Hansen
 \end_layout
 
+\begin_layout Standard
+\begin_inset Branch Outline
+inverted 0
+status collapsed
+
+\begin_layout Enumerate
+Introduction
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Hook:????
+\end_layout
+
+\begin_layout Enumerate
+Criticism of the Grossman model
+\end_layout
+
+\begin_layout Enumerate
+Motivating a new model
+\end_layout
+
+\begin_layout Enumerate
+Outline of review
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Background
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Frailty index
+\end_layout
+
+\begin_layout Enumerate
+Reliability theory
+\end_layout
+
+\begin_layout Enumerate
+Health deficit model
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+How it is built
+\end_layout
+
+\begin_layout Enumerate
+Micro foundations of the model
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Empirical applications
+\end_layout
+
+\begin_layout Enumerate
+Theoretical applications
+\end_layout
+
+\begin_layout Enumerate
+Conclusion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch To do
+inverted 0
+status collapsed
+
+\begin_layout Itemize
+Make a section where you write about the SHARE-dataset (DRY-principle)
+\end_layout
+
+\begin_layout Itemize
+Write that you use different simplified notation than in the studies.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introduction
 \end_layout
 
 \begin_layout Standard
-In section 
+In this literature review I will review the literature on the Health Deficit
+ Model.
+ The Health Deficit Model is a model developed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardOptimalAgingDeath2014"
+literal "false"
+
+\end_inset
+
+, with the intent to provide an alternative to the Health Capital Model
+ by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "grossmanConceptHealthCapital1972"
+literal "false"
+
+\end_inset
+
+ - the standard model of health in health economics.
+\end_layout
+
+\begin_layout Standard
+In the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "grossmanConceptHealthCapital1972"
+literal "false"
+
+\end_inset
+
+ model (Health Capital Model; HCM), health is a capital stock that depreciates
+ following the law of motion of health capital
+\begin_inset Formula 
+\begin{equation}
+\dot{H}\left(t\right)=I\left(t\right)+\left(1-\delta\left(t\right)\right)H\left(t\right).\label{eq:law of motion of health capital}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $H$
+\end_inset
+
+ is health stock at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $I\left(t\right)$
+\end_inset
+
+ is non-negative health investments at time 
+\begin_inset Formula $t$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta\left(t\right)$
+\end_inset
+
+ is the depreciation of health capital at time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ In short, there are 
+\series bold
+X
+\series default
+ empirical problems with the Health Capital Model.
+ Firstly, from 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Reliability-theory"
+LatexCommand eqref
+reference "eq:law of motion of health capital"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- I will explain the reliability theory, as seen from the biological...
- from 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "gavrilovReliabilityTheoryAging2005"
-literal "false"
+, the amount of depreciation is increasing in health capital, which imply
+ that healthy individuals lose more health per period..
+ Secondly, if the depreciation rate is constant, then life is infinite.
+ This follows from solving equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:law of motion of health capital"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-.
+ (assuming 
+\begin_inset Formula $I\left(t\right)=0$
+\end_inset
+
+ for simplicity): 
+\begin_inset Formula 
+\[
+\int\left[\dot{H}\left(t\right)-\left(1-\delta\right)H\left(t\right)\right]dt=\int\left[\frac{d}{dt}\left(H\left(t\right)e^{-\left(1-\delta\right)t}\right)\right]dt=H\left(t\right)e^{-\left(1-\delta\right)t}
+\]
+
+\end_inset
+
+which is only equal to 
+\begin_inset Formula $0$
+\end_inset
+
+ if 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+, i.e.
+ life is infinite.
+ As many health choices revolves around end-of-life care, it makes the Health
+ Capital Model hard to use empirically.
+ Thirdly, health is a latent variable, which is hard to measure.
+ These three problems with the Health Capital Model justify looking for
+ alternative theoretical models to base testable predictions on.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I need some sharper arguments against the Health Capital Model.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To understand the foundations of the Health Deficit Model, I provide a quick
+ recap of the frailty index and reliability theory
+\end_layout
+
+\begin_layout Standard
+In section...
+ frailty index, in section ...
+ reliability theory in 
 \end_layout
 
 \begin_layout Section
 Background
 \end_layout
 
-\begin_layout Subsection
-The mortality laws
-\end_layout
-
-\begin_layout Enumerate
-Compertz-Makeham law: The mortality rate is increasing exponentially with
- time.
-\end_layout
-
-\begin_layout Enumerate
-Law of compensating mortality: Initial higher mortality rate is compensated
- by a lower rate of mortality increase.
-\end_layout
-
-\begin_layout Enumerate
-Law of late-life mortality plateau: Mortality rates stabilizes at late-life
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-implying that they don't age anymore at that point
-\end_layout
-
-\end_inset
-
-.
-\end_layout
+\begin_layout Standard
+\begin_inset Branch Reliability theory
+inverted 0
+status collapsed
 
 \begin_layout Subsection
 Reliability theory 
@@ -381,6 +585,11 @@ For a low
 High Initial Damage Load
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Frailty index
 \end_layout
@@ -509,20 +718,37 @@ Theoretical framework
 \end_layout
 
 \begin_layout Standard
-The Health Deficit Model is a micro-founded alternative to the Grossman-model
- of health capital.
- The Health Deficit Model is micro-founded on reliability theory, which
- states that biological aging is the increase in mortality rates caused
- by the reduction of biological redundancies.
- In an extreme example, if each kidney have a 50% chance of failure each
- period, and the individual dies if both kidneys fail, then the mortality
- rate 
-\begin_inset Formula $25\%=2\cdot50\%$
+In 
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "dalgaardOptimalAgingDeath2014"
+literal "false"
+
+\end_inset
+
+ by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardOptimalAgingDeath2014"
+literal "false"
+
+\end_inset
+
+ they develop the Health Deficit Model.
+ Their justification for a new health model is the amount of flaws with
+ the popular model by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "grossmanConceptHealthCapital1972"
+literal "false"
+
 \end_inset
 
 .
- The individual is only getting older when the first kidney fails, and the
- individual dies when both kidneys has failed.
+\end_layout
+
+\begin_layout Subsubsection
+Health deficit accumulation
 \end_layout
 
 \begin_layout Standard
@@ -541,7 +767,7 @@ literal "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-D\left(t\right)=E+Be^{\mu t},\label{eq:Health Deficit Accumulation}
+D\left(t\right)=E+Be^{\mu t},\label{Makeham-Gompertz Law}
 \end{equation}
 
 \end_inset
@@ -558,9 +784,9 @@ where
 \begin_inset Formula $E$
 \end_inset
 
- is the Makeham-term, and corresponds to environmental and individual factors
+ is the Makeham term, and corresponds to environmental and individual factors
  of deficit accumulation, 
-\begin_inset Formula $B$
+\begin_inset Formula $Be^{\mu t}$
 \end_inset
 
  is the Gompertz term, and 
@@ -571,7 +797,7 @@ where
  As is clear from 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Health Deficit Accumulation"
+reference "Makeham-Gompertz Law"
 plural "false"
 caps "false"
 noprefix "false"
@@ -586,7 +812,7 @@ noprefix "false"
  from 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Health Deficit Accumulation"
+reference "Makeham-Gompertz Law"
 plural "false"
 caps "false"
 noprefix "false"
@@ -601,14 +827,13 @@ noprefix "false"
 \begin_inset Formula $t$
 \end_inset
 
-.
- This is called the Gompertz law of mortality, and is often used empirically
- to estimate biological aging and survival probabilities, because it yields
+ called the Gompertz law of mortality, and is often used empirically to
+ estimate biological aging and survival probabilities, because it yields
  a log-linear relationship in age.
  This can be seen from taking the log of 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Health Deficit Accumulation"
+reference "Makeham-Gompertz Law"
 plural "false"
 caps "false"
 noprefix "false"
@@ -634,7 +859,7 @@ where
 To use equation 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Health Deficit Accumulation"
+reference "Makeham-Gompertz Law"
 plural "false"
 caps "false"
 noprefix "false"
@@ -787,7 +1012,7 @@ noprefix "false"
 , subject to health deficit accumulation,
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Health Deficit Accumulation"
+reference "Makeham-Gompertz Law"
 plural "false"
 caps "false"
 noprefix "false"
@@ -829,7 +1054,7 @@ noprefix "false"
 , 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Health Deficit Accumulation"
+reference "Makeham-Gompertz Law"
 plural "false"
 caps "false"
 noprefix "false"
@@ -865,6 +1090,180 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_inserted 31028646 1673190250
+The main question is whether the Makeham-Gompertz law of Mortality and the
+ compensating law of mortality have the same estimates for the health deficit
+ index.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+This question is important, as it would empirically validate the use of
+ the frailty index as a proxy for mortality in theoretical applications.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+They use the same equations as Mitnitski 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 31028646 1673190250
+Cross-reference
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+They use the Survey of Health, Aging and Retirement in Europe (SHARE) dataset,
+ that includes over 140,000 individuals over the age of 50 from 20 European
+ countries.
+ The survey includes questions on health-related factors, that 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+ use to create a health deficit index.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+They exploit the panel nature of the SHARE-dataset to estimate fixed- and
+ random effects regressions.
+ They further use non-linear least squares so they don't need to assume
+ 
+\begin_inset Formula $M=0$
+\end_inset
+
+ in 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 31028646 1673190250
+cross-reference
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+Contrary to previous research on health deficits with the SHARE dataset,
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+ use that SHARE is a panel-dataset to estimate individual fixed effects
+ and random effect regressions.
+ These panel-data methods allow them to show whether the biology laws hold
+ at the individual level.
+ This contribution is important for theoretical work that builds uses the
+ health deficit model and uses a representative agent, because it might
+ be that the Gompertz law only hold in the aggregate.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+From the panel estimates they find that 
+\begin_inset Formula $\widehat{\mu}=\begin{cases}
+0.026 & \text{Males}\\
+0.029 & \text{Females}
+\end{cases}$
+\end_inset
+
+, 
+\begin_inset Formula $\widehat{\ln\left(G\right)}=\begin{cases}
+-4.145 & \text{Males}\\
+-3.906 & \text{Females}
+\end{cases}$
+\end_inset
+
+ so that men start with less deficits, but accumulate them faster.
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+The non-linear least squares estimates, however, show that 
+\begin_inset Formula $\widehat{\mu}=\begin{cases}
+0.073 & \text{Males}\\
+0.052 & \text{Females}
+\end{cases}$
+\end_inset
+
+,
+\begin_inset Formula $\widehat{M}=\begin{cases}
+0.076 & \text{Males}\\
+0.075 & \text{Females}
+\end{cases}$
+\end_inset
+
+, 
+\begin_inset Formula $\widehat{G}=\begin{cases}
+0.0003 & \text{Males}\\
+0.003 & \text{Females}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_inserted 31028646 1673190250
+The estimates above imply allowing for the Makeham-term increases the rate
+ of aging by a large fraction: By almost 5 percentage point for men and
+ 3 percentage point for women.
+ Theoretical calibrations of models that allow for the Makeham-term should
+ therefore be based on the much higher estimates of the force of deficit
+ accumulation, 
+\begin_inset Formula $\mu$
+\end_inset
+
+, than in the simplified Gompertz law of mortality.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? What are the limitations
+ of the data and methods? How could one improve upon this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 31028646 1673190250
 In this paper, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -873,12 +1272,20 @@ literal "false"
 
 \end_inset
 
- answers the question of how Europeans age.
- They use the Survey of Health, Aging and Retirement in Europe (SHARE) dataset
- to estimate the relationship between health deficits and age using panel
- data methods.
- They are interested in whether they also find compensation in deficits
- as predicted from the Law of Compensation Frailty 
+ estimates how Europeans age, by creating a Health Deficit Index from the
+ Survey of Health, Aging and Retirement in Europe (SHARE) dataset.
+ They estimate two equations: The Gompertz law of mortality the Makeham-Gompertz
+ law of mortality 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cross-reference this
+\end_layout
+
+\end_inset
+
+, but by using health deficits as a proxy for mortality 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mitnitskiAccumulationDeficitsProxy2001"
@@ -890,6 +1297,67 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted 31028646 1673190250
+The Gompertz law of mortality lends itself easily to empirical research,
+ as it predicts a log-linear relationship with deficit accumulation and
+ chronological age, 
+\begin_inset Formula $D\left(t\right)=Ge^{\mu t}\Rightarrow\ln\left(D\left(t\right)\right)=\ln\left(G\right)+\mu t$
+\end_inset
+
+, so that 
+\begin_inset Formula $\mu$
+\end_inset
+
+ can be estimated by OLS.
+ Contrary to the Gompertz law, the Makeham-Gompertz law of mortality must
+ be estimated non-linearly, as 
+\begin_inset Formula $\ln\left(D\left(t\right)\right)=\ln\left(M+Ge^{\mu t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 31028646 1673190250
+Empirical work on mortality have shown that the parameters of the (Makeham)-Gomp
+ertz law of mortality can be estimated with high precision.
+ This paper attempts to see if the same thing hold for health deficits.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 31028646 1673190250
+Another law that have been estimated with high precision is the law of compensat
+ing mortality which states that
+\begin_inset Formula 
+\[
+\ln\left(G\right)=\ln\left(M\right)-T\mu\implies G=Me^{-\mu T}
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula $D\left(t\right)-A=Me^{\mu\left(t-T\right)}$
+\end_inset
+
+, so that at age 
+\begin_inset Formula $T$
+\end_inset
+
+ all individuals have the same mortality rate.
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 31028646 1673190250
+They 
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 31028646 1673190250
 By running random- and fixed effects regressions, they find a log-linear
  relationship between age and deficit accumulation.
  For men they find that they accumulate 2.6 percent more deficits each year.
@@ -897,14 +1365,20 @@ By running random- and fixed effects regressions, they find a log-linear
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted 31028646 1673190250
 However, using non-linear regressions, by including the Makeham term, they
  find that the estimates increases to 7.3 percent for men, and 5.2 percent
  for women.
 \end_layout
 
 \begin_layout Standard
+
+\change_deleted 31028646 1673190250
 They also find a significant Makeham term, so that the log-specification
  is biased.
+\change_unchanged
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -919,31 +1393,151 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The fetal-origins literature have matured into a more developmental origins
- literature.
- Under-nutrition in early stages of life is bad.
- This paper 
+This paper aims to answer the question of how health shocks in early life
+ affects changes over the life-cycle.
+ More specific they estimate how hunger affects health deficit accumulation
+ over the life-cycle.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) How does the author apply microeconomics to a specific topic, and how
+ does the author use microeconomic theory to derive testable predictions?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They model hunger episodes of the Makeham-Gompertz law of mortality by individua
+ls accumulate more deficits if the suffered hunger at childhood.
+ They estimate the equation
+\begin_inset Formula 
+\[
+D\left(t\right)=Ge^{\mu t}e^{\gamma1\left\{ Hunger\right\} }\implies\ln D\left(t\right)=\ln\left(G\right)+\mu t+\gamma1\left\{ Hunger\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the parameter of the hunger-dummy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data are studied?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They use the SHARE-dataset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What econometric methods are employed by the authors to test their hypotheses
+? What is the identification strategy for measuring a causal effect? Are
+ you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They use OLS, random effects and Mundlak regressions.
+ They do not use fixed effects, because hunger episodes are constant across
+ time per individual.
+ The random effects model requires that the composite errors and the regressors
+ are uncorrelated.
+ This is a strong assumption, which is a reason why it isn't used as much
+ empirically as the fixed effects estimator, despite it being more efficient.
+ However, as the regressors are age, i.e.
+ time, then it implies that if the random effects estimator is biased, then
+ so would the fixed effects estimator also be.
+\end_layout
+
+\begin_layout Standard
+They cluster the SE at country and year-of-birth level.
+ Clustering at country-level and year-of-birth-level makes sense according
+ to the 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "abelianskyHungryChildrenAge2018"
+key "abadieWhenShouldYou2022"
 literal "false"
 
 \end_inset
 
- show that hunger in childhood affects biological aging.
- They estimate this from multiple waves of the Share Panel of European elderly.
- Effects are smaller for men.
- Also smaller from age 4-8.
- Contemporary research have problem with explaining aging, such that mortality
- follows the Gompertz-Makeham law.
- Reliability can explain this by seing humans as a system with many redundancies.
- The use a frailty index.
- SHARE: Survey of Health, Aging, Retirement in Europe.
- They use a log-linear regression strategy.
- They find that childhood exposure to hunger leads to a 20% higher accumulation
- of deficits in old age.
- Using non-linear regressions, akin to the Gompertz-Makeham Law, they find
- larger effects of hunger on aging.
+ framework for clustering, as the SHARE-dataset is sampled firstly at country
+ level, then at year-of-birth-level inside these clusters of countries.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While a lot of research have been done on the relationship between early
+ life health shocks and health as adults, this paper improves by on the
+ literature by estimating how health changes over the life-cycle continuously.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? What are the limitations
+ of the data and methods? How could one improve upon this study?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1151,8 +1745,49 @@ The effect of SVI on FI is not causal, and probably subject to reverse causality
 Theoretical findings
 \end_layout
 
-\begin_layout Subsubsection
-Occupational theories
+\begin_layout Standard
+All theoretical extensions our basic calibrations are based on the model
+ by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardOptimalAgingDeath2014"
+literal "false"
+
+\end_inset
+
+.
+ I will define the extensions to equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:life-time utility"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as utility-extensions, equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Makeham-Gompertz Law"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as deficit-extensions, and equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Law of motion of capital"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as capital-extensions.
+ The model
 \end_layout
 
 \begin_layout Paragraph
@@ -1452,7 +2087,7 @@ literal "false"
  The intuition for the first result is the same as in 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:Health Deficit Accumulation"
+reference "Makeham-Gompertz Law"
 plural "false"
 caps "false"
 noprefix "false"
