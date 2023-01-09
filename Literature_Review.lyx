@@ -98,7 +98,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author 31028646 "henrik"
 \end_header
 
 \begin_body
@@ -114,7 +113,7 @@ Henrik Hansen
 \begin_layout Standard
 \begin_inset Branch Outline
 inverted 0
-status collapsed
+status open
 
 \begin_layout Enumerate
 Introduction
@@ -131,6 +130,10 @@ Criticism of the Grossman model
 
 \begin_layout Enumerate
 Motivating a new model
+\end_layout
+
+\begin_layout Enumerate
+Use of notation
 \end_layout
 
 \begin_layout Enumerate
@@ -170,6 +173,16 @@ Micro foundations of the model
 Empirical applications
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+The SHARE-dataset
+\end_layout
+
+\begin_layout Enumerate
+Gompertz equations and Makeham-Gompertz equations
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Theoretical applications
 \end_layout
@@ -186,7 +199,7 @@ Conclusion
 \begin_layout Standard
 \begin_inset Branch To do
 inverted 0
-status collapsed
+status open
 
 \begin_layout Itemize
 Make a section where you write about the SHARE-dataset (DRY-principle)
@@ -194,6 +207,26 @@ Make a section where you write about the SHARE-dataset (DRY-principle)
 
 \begin_layout Itemize
 Write that you use different simplified notation than in the studies.
+\end_layout
+
+\begin_layout Itemize
+Understand what Mundlak regressions are
+\end_layout
+
+\begin_layout Itemize
+The estimation equations need an error term
+\end_layout
+
+\begin_layout Itemize
+Criticize the empirical papers for not adjusting for multiple hypothesis-testing
+\end_layout
+
+\begin_layout Itemize
+Make a section about the fetal-origins hypothesis
+\end_layout
+
+\begin_layout Itemize
+Should there be a section, where the estimates and equations are?
 \end_layout
 
 \end_inset
@@ -710,10 +743,1545 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-Health Deficit Model
+Empirical findings
+\end_layout
+
+\begin_layout Standard
+The following empirical papers estimate extensions of the following equations
+\begin_inset Formula 
+\begin{align}
+\ln D_{ig} & =\ln G_{ig}+\mu_{ig}\cdot t_{ig}+\epsilon_{ig}\label{eq:Gompertz_empirical}\\
+D_{ig} & =M_{g}+G_{g}\cdot e^{\mu_{g}\cdot t_{ig}}+\epsilon_{ig}\label{eq:Makeham-Gompertz_empirical}
+\end{align}
+
+\end_inset
+
+for individual 
+\begin_inset Formula $i$
+\end_inset
+
+ in group 
+\begin_inset Formula $g$
+\end_inset
+
+, and 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is the error term.
+ Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Gompertz_empirical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is defined as the Gompertz equation, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Makeham-Gompertz_empirical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is defined as the Makeham-Gompertz equation.
+\end_layout
+
+\begin_layout Standard
+The most of the following studies use 4 different regressions for the log-linear
+ Gompertz equation: OLS, fixed effects, random effects and Mundlak-regressions.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Write about the different approaches, the assumptions and so on.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In most of the studies they also create a health deficit index from the
+ Survey of Health, Aging and Retirement in Europe (SHARE) dataset, that
+ includes over 140,000 individuals over the age of 50 from 20 European countries.
+ The SHARE dataset is created by repeated sampling of retirerees in Europe,
+ so it has a panel-structure.
+\end_layout
+
+\begin_layout Standard
+The health deficit index is created according to the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsProxy2001"
+literal "false"
+
+\end_inset
+
+-paper.
+ Basically, it measures the share of deficits to potential deficits, where
+ potential deficits are the number of defictis the survey-participant responds
+ to.
+ 
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main question is whether the Makeham-Gompertz law of Mortality and the
+ compensating law of mortality have the same estimates for the health deficit
+ index.
+\end_layout
+
+\begin_layout Standard
+This question is important, as it would empirically validate the use of
+ the frailty index as a proxy for mortality in theoretical applications.
+\end_layout
+
+\begin_layout Standard
+They use the same equations as Mitnitski 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cross-reference
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They use the Survey of Health, Aging and Retirement in Europe (SHARE) dataset,
+ that includes over 140,000 individuals over the age of 50 from 20 European
+ countries.
+ The survey includes questions on health-related factors, that 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+ use to create a health deficit index.
+\end_layout
+
+\begin_layout Standard
+They exploit the panel nature of the SHARE-dataset to estimate fixed- and
+ random effects regressions.
+ They further use non-linear least squares so they don't need to assume
+ 
+\begin_inset Formula $M=0$
+\end_inset
+
+ in 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+cross-reference
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Contrary to previous research on health deficits with the SHARE dataset,
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+ use that SHARE is a panel-dataset to estimate individual fixed effects
+ and random effect regressions.
+ These panel-data methods allow them to show whether the biology laws hold
+ at the individual level.
+ This contribution is important for theoretical work that builds uses the
+ health deficit model and uses a representative agent, because it might
+ be that the Gompertz law only hold in the aggregate.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Linear estimates
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-linear estimates
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Paremeter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Female
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Male
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Female
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Male
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.029
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.026
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.052
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.073
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.02012
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.01584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0003
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.075
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.076
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The estimates above imply allowing for the Makeham-term increases the rate
+ of aging by a large fraction: By almost 5 percentage point for men and
+ 3 percentage point for women.
+ Theoretical calibrations of models that allow for the Makeham-term should
+ therefore be based on the much higher estimates of the force of deficit
+ accumulation, 
+\begin_inset Formula $\mu$
+\end_inset
+
+, than in the simplified Gompertz law of mortality.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? What are the limitations
+ of the data and methods? How could one improve upon this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHungryChildrenAge2018"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper aims to answer the question of how health shocks in early life
+ affects changes over the life-cycle.
+ More specific they estimate how hunger affects health deficit accumulation
+ over the life-cycle.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) How does the author apply microeconomics to a specific topic, and how
+ does the author use microeconomic theory to derive testable predictions?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They model hunger episodes of the Makeham-Gompertz law of mortality by individua
+ls accumulate more deficits if the suffered hunger at childhood.
+ They estimate the equation
+\begin_inset Formula 
+\[
+D\left(t\right)=Ge^{\mu t}e^{\gamma1\left\{ Hunger\right\} }\implies\ln D\left(t\right)=\ln\left(G\right)+\mu t+\gamma1\left\{ Hunger\right\} 
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the parameter of the hunger-dummy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data are studied?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They use the SHARE-dataset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What econometric methods are employed by the authors to test their hypotheses
+? What is the identification strategy for measuring a causal effect? Are
+ you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They use OLS, random effects and Mundlak regressions.
+ They do not use fixed effects, because hunger episodes are constant across
+ time per individual.
+ The random effects model requires that the composite errors and the regressors
+ are uncorrelated.
+ This is a strong assumption, which is a reason why it isn't used as much
+ empirically as the fixed effects estimator, despite it being more efficient.
+ However, as the regressors are age, i.e.
+ time, then it implies that if the random effects estimator is biased, then
+ so would the fixed effects estimator also be.
+\end_layout
+
+\begin_layout Standard
+They cluster the SE at country and year-of-birth level.
+ Clustering at country-level and year-of-birth-level makes sense according
+ to the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abadieWhenShouldYou2022"
+literal "false"
+
+\end_inset
+
+ framework for clustering, as the SHARE-dataset is sampled firstly at country
+ level, then at year-of-birth-level inside these clusters of countries.
+ 
+\end_layout
+
+\begin_layout Standard
+They further use non-linear regressions to relax the assumption that the
+ Makeham-term, 
+\begin_inset Formula $M$
+\end_inset
+
+, is 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While a lot of research have been done on the relationship between early
+ life health shocks and health as adults, this paper improves by on the
+ literature by estimating how health changes over the life-cycle continuously.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Linear estimates
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-linear estimates
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Paremeter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Female
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Male
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Female
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Male
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.034
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.028
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.055
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.083
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.012
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.547
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.429
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.013
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.081
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.077
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These estimates are close to the same values as in section 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+.
+ Both the linear and the non-linear estimates show that hunger at age 0-4
+ causes a 1%-2% higher deficit accumulation over the life-cycle.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? What are the limitations
+ of the data and methods? How could one improve upon this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ is low, which is weird, because Mitnitski finds 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ close to 
+\begin_inset Formula $95\%$
+\end_inset
+
+.
+ Why is that?
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskySeasonBirthHealth2020"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper answers how season of birth affects the aging process, understood
+ as the accumulation of health deficits.
+ There has been many studies that link season of birth to longevity, by
+ showing how it affects certain diseases and health deficits.
+ In this paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySeasonBirthHealth2020"
+literal "false"
+
+\end_inset
+
+ estimates how season of birth affects health and longevity in the aggregate,
+ i.e.
+ how it affect the deficit acummulation.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) How does the author apply microeconomics to a specific topic, and how
+ does the author use microeconomic theory to derive testable predictions?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data are studied?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They use the SHARE dataset.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What econometric methods are employed by the authors to test their hypotheses
+? What is the identification strategy for measuring a causal effect? Are
+ you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They use use OLS, random effects and Mundlak regressions, because they cannot
+ use fixed effects regressions, and they use non-linear least squares for
+ robustness check.
+\end_layout
+
+\begin_layout Standard
+The log-linear estimations are of the following equation
+\begin_inset Formula 
+\begin{align*}
+D\left(t\right) & =Ge^{\mu t}e^{\gamma_{1}1\left\{ \text{Winter}\right\} }e^{\gamma_{2}1\left\{ \text{Spring}\right\} }e^{\gamma_{3}1\left\{ \text{Summer}\right\} }\\
+\Rightarrow\ln\left(D\left(t\right)\right) & =\ln G+\mu t+\gamma_{1}1\left\{ \text{Winter}\right\} +\gamma_{2}1\left\{ \text{Spring}\right\} +\gamma_{3}1\left\{ \text{Summer}\right\} 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Fetal Origins Hypothesis (FOH) states that small early life health shocks,
+ can have large health consequences late in life.
+ Such an early life health shock is the season of birth.
+ While season of birth have been shown to affect the probability of developing
+ diseases and other types of health deficits, it is unknown how season of
+ birth affects the aging process itself, i.e.
+ the accumulation of health deficits.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the log-linear regressions they find that the season of birth determines
+ that individuals accumulate 0.67% more deficits in winter, 0.76% more in
+ spring, and 1.4% more deficits each year in summer compared to if they were
+ born in the fall.
+ However, most estimates aren't statistical significant at 5%.
+\end_layout
+
+\begin_layout Standard
+It makes sense that the effects are rather small, because it would be weird
+ if humans hadn't evolve to tolerate seasons.
+ However, it also makes sense that they aren't zero, because pregnant women
+ might be consuming more 
+\end_layout
+
+\begin_layout Standard
+In the non-linear estimation results, however, they find a large effect
+ for men born in the spring of 7%, implying that individuals born in the
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? What are the limitations
+ of the data and methods? How could one improve upon this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They run a lot of regressions, but they don't control for multiple hypothesis
+ testing.
+ For each gender they run four different types of regressions, with 3 variables
+ of interest for a total of 24 hypotheses.
+ They further redo the analysis for the subsample of Mediterranean and Nordic
+ countries, plus they run non-linear least squares.
+ This extensive estimation machinery results in 
+\begin_inset Formula $78$
+\end_inset
+
+ hypotheses for the effect of seasons on the aging process.
+ There is therefore a somewhat high probability that the effects are spurious.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHealthAgingRetirement2020"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper answers the question of how blue- and white collar workers age
+ through their life.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) How does the author apply microeconomics to a specific topic, and how
+ does the author use microeconomic theory to derive testable predictions?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data are studied?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The SHARE-dataset and the Job Episodes Panel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What econometric methods are employed by the authors to test their hypotheses
+? What is the identification strategy for measuring a causal effect? Are
+ you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+D\left(t\right) & =Ge^{\mu t}e^{\omega t1\left\{ \text{Retirement}\right\} }\implies\ln D\left(t\right)=\ln G+\mu t+\omega t1\left\{ \text{Retirement}\right\} \\
+\ln D\left(t\right) & =\ln G+\mu t+\gamma1\left\{ \text{Retirement}\right\} 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They estimate the following equation by individual fixed effects and instrumenta
+l variable.
+ In the IV regressions they use statutory ages of retirement as instruments,
+ as retirement status might be endogenous.
+ If for example a worker is subject to a workplace injury, she will get
+ a sudden increase in the deficit at the period of injury, but she might
+ also retire early because of the injury, if it is disabling.
+ In this case, the 
+\begin_inset Formula $\omega$
+\end_inset
+
+-estimate would be biased upwards.
+ Using statutory ages as instrument can help, because they have been shown
+ to work as reference points for retirement decisions 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "seiboldReferencePointsRetirement2021"
+literal "false"
+
+\end_inset
+
+.
+ This relies on the assumption that the statutory ages aren't related to
+ deficit acummulation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Earlier research on occupational choice and health have not estimated the
+ time-intensive burden of occupational choice.
+ This contributes to the previous research by estimating the effect of occupatio
+nal choice on health.
+ This occupational effect is important for health care literature and general
+ public finance, as health care costs and retirement are some of the largest
+ expenses for governments.
+\end_layout
+
+\begin_layout Standard
+The long-term consequences of occupational choice on health are especially
+ important, if the short-term effects are small, but the long-term effects
+ are large.
+ Then causal estimates from, say, difference-in-difference litterature,
+ that operate on small time scales, would underestimate the long-term consequenc
+es.
+ Especially in the simple difference-in-difference setting, where treatment
+ effects are linear and not exponential.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? What are the limitations
+ of the data and methods? How could one improve upon this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper answers the question of how social vulnerability affects biological
+ aging.
+ This research question is important, because there is a belief that there
+ is a loneliness epidemic
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See for example the descriptive statistics of the decrease in civic partipation
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "putnamBowlingAloneCollapse2001"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) How does the author apply microeconomics to a specific topic, and how
+ does the author use microeconomic theory to derive testable predictions?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data are studied?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this paper, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+ study the effects of social vulnerability on biological aging among the
+ elderly in the United States.
+ They use data from the Health and Retirement Study, out of which they create
+ a Social Vulnerability Index (SVI) and a frailty index (FI).
+ The data consists of 17602 elderly individuals.
+\end_layout
+
+\begin_layout Standard
+They create the SVI as they create the FI.
+ That is, they divide number of social deficits by total potential social
+ deficits.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What econometric methods are employed by the authors to test their hypotheses
+? What is the identification strategy for measuring a causal effect? Are
+ you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They, outside of creating a health deficit index, create a social vulnerability
+ index in a somewhat similar manner.
+ The difference is that while the health deficit index is created by yes/no
+ questions, the social vulnerability index is created as a scale.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Read Nabanita's paper on self-reported health
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They find that the SVI is positively correlated with the FI.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? What are the limitations
+ of the data and methods? How could one improve upon this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The effect of SVI on FI is not causal, and probably subject to reverse causality
+ if for example disabled individuals are socially vulnerably due to their
+ disability.
+\end_layout
+
+\begin_layout Section
 Theoretical framework
 \end_layout
 
@@ -747,7 +2315,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Health deficit accumulation
 \end_layout
 
@@ -1071,677 +2639,11 @@ noprefix "false"
 
 \end_inset
 
-, the initial/terminal conditions, or alternatively add an extra constraint.
+, the initial/terminal conditions, or alternatively add extra constraints
+ to the problem.
 \end_layout
 
-\begin_layout Subsection
-Empirical findings
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-The main question is whether the Makeham-Gompertz law of Mortality and the
- compensating law of mortality have the same estimates for the health deficit
- index.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-This question is important, as it would empirically validate the use of
- the frailty index as a proxy for mortality in theoretical applications.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-They use the same equations as Mitnitski 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted 31028646 1673190250
-Cross-reference
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-They use the Survey of Health, Aging and Retirement in Europe (SHARE) dataset,
- that includes over 140,000 individuals over the age of 50 from 20 European
- countries.
- The survey includes questions on health-related factors, that 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
- use to create a health deficit index.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-They exploit the panel nature of the SHARE-dataset to estimate fixed- and
- random effects regressions.
- They further use non-linear least squares so they don't need to assume
- 
-\begin_inset Formula $M=0$
-\end_inset
-
- in 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\change_inserted 31028646 1673190250
-cross-reference
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-Contrary to previous research on health deficits with the SHARE dataset,
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
- use that SHARE is a panel-dataset to estimate individual fixed effects
- and random effect regressions.
- These panel-data methods allow them to show whether the biology laws hold
- at the individual level.
- This contribution is important for theoretical work that builds uses the
- health deficit model and uses a representative agent, because it might
- be that the Gompertz law only hold in the aggregate.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-From the panel estimates they find that 
-\begin_inset Formula $\widehat{\mu}=\begin{cases}
-0.026 & \text{Males}\\
-0.029 & \text{Females}
-\end{cases}$
-\end_inset
-
-, 
-\begin_inset Formula $\widehat{\ln\left(G\right)}=\begin{cases}
--4.145 & \text{Males}\\
--3.906 & \text{Females}
-\end{cases}$
-\end_inset
-
- so that men start with less deficits, but accumulate them faster.
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-The non-linear least squares estimates, however, show that 
-\begin_inset Formula $\widehat{\mu}=\begin{cases}
-0.073 & \text{Males}\\
-0.052 & \text{Females}
-\end{cases}$
-\end_inset
-
-,
-\begin_inset Formula $\widehat{M}=\begin{cases}
-0.076 & \text{Males}\\
-0.075 & \text{Females}
-\end{cases}$
-\end_inset
-
-, 
-\begin_inset Formula $\widehat{G}=\begin{cases}
-0.0003 & \text{Males}\\
-0.003 & \text{Females}
-\end{cases}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_inserted 31028646 1673190250
-The estimates above imply allowing for the Makeham-term increases the rate
- of aging by a large fraction: By almost 5 percentage point for men and
- 3 percentage point for women.
- Theoretical calibrations of models that allow for the Makeham-term should
- therefore be based on the much higher estimates of the force of deficit
- accumulation, 
-\begin_inset Formula $\mu$
-\end_inset
-
-, than in the simplified Gompertz law of mortality.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-7) Do you see any problems with the reasoning? What are the limitations
- of the data and methods? How could one improve upon this study?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-In this paper, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
- estimates how Europeans age, by creating a Health Deficit Index from the
- Survey of Health, Aging and Retirement in Europe (SHARE) dataset.
- They estimate two equations: The Gompertz law of mortality the Makeham-Gompertz
- law of mortality 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-cross-reference this
-\end_layout
-
-\end_inset
-
-, but by using health deficits as a proxy for mortality 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "mitnitskiAccumulationDeficitsProxy2001"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-The Gompertz law of mortality lends itself easily to empirical research,
- as it predicts a log-linear relationship with deficit accumulation and
- chronological age, 
-\begin_inset Formula $D\left(t\right)=Ge^{\mu t}\Rightarrow\ln\left(D\left(t\right)\right)=\ln\left(G\right)+\mu t$
-\end_inset
-
-, so that 
-\begin_inset Formula $\mu$
-\end_inset
-
- can be estimated by OLS.
- Contrary to the Gompertz law, the Makeham-Gompertz law of mortality must
- be estimated non-linearly, as 
-\begin_inset Formula $\ln\left(D\left(t\right)\right)=\ln\left(M+Ge^{\mu t}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-Empirical work on mortality have shown that the parameters of the (Makeham)-Gomp
-ertz law of mortality can be estimated with high precision.
- This paper attempts to see if the same thing hold for health deficits.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-Another law that have been estimated with high precision is the law of compensat
-ing mortality which states that
-\begin_inset Formula 
-\[
-\ln\left(G\right)=\ln\left(M\right)-T\mu\implies G=Me^{-\mu T}
-\]
-
-\end_inset
-
-which implies that 
-\begin_inset Formula $D\left(t\right)-A=Me^{\mu\left(t-T\right)}$
-\end_inset
-
-, so that at age 
-\begin_inset Formula $T$
-\end_inset
-
- all individuals have the same mortality rate.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-They 
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-By running random- and fixed effects regressions, they find a log-linear
- relationship between age and deficit accumulation.
- For men they find that they accumulate 2.6 percent more deficits each year.
- For women it is 2.3 percent.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-However, using non-linear regressions, by including the Makeham term, they
- find that the estimates increases to 7.3 percent for men, and 5.2 percent
- for women.
-\end_layout
-
-\begin_layout Standard
-
-\change_deleted 31028646 1673190250
-They also find a significant Makeham term, so that the log-specification
- is biased.
-\change_unchanged
-
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskyHungryChildrenAge2018"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This paper aims to answer the question of how health shocks in early life
- affects changes over the life-cycle.
- More specific they estimate how hunger affects health deficit accumulation
- over the life-cycle.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-2) How does the author apply microeconomics to a specific topic, and how
- does the author use microeconomic theory to derive testable predictions?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-They model hunger episodes of the Makeham-Gompertz law of mortality by individua
-ls accumulate more deficits if the suffered hunger at childhood.
- They estimate the equation
-\begin_inset Formula 
-\[
-D\left(t\right)=Ge^{\mu t}e^{\gamma1\left\{ Hunger\right\} }\implies\ln D\left(t\right)=\ln\left(G\right)+\mu t+\gamma1\left\{ Hunger\right\} 
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $\gamma$
-\end_inset
-
- is the parameter of the hunger-dummy.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-3) What data are studied?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-They use the SHARE-dataset.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-4) What econometric methods are employed by the authors to test their hypotheses
-? What is the identification strategy for measuring a causal effect? Are
- you convinced by it?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-They use OLS, random effects and Mundlak regressions.
- They do not use fixed effects, because hunger episodes are constant across
- time per individual.
- The random effects model requires that the composite errors and the regressors
- are uncorrelated.
- This is a strong assumption, which is a reason why it isn't used as much
- empirically as the fixed effects estimator, despite it being more efficient.
- However, as the regressors are age, i.e.
- time, then it implies that if the random effects estimator is biased, then
- so would the fixed effects estimator also be.
-\end_layout
-
-\begin_layout Standard
-They cluster the SE at country and year-of-birth level.
- Clustering at country-level and year-of-birth-level makes sense according
- to the 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abadieWhenShouldYou2022"
-literal "false"
-
-\end_inset
-
- framework for clustering, as the SHARE-dataset is sampled firstly at country
- level, then at year-of-birth-level inside these clusters of countries.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-5) How does the paper improve upon previous research? What is its contribution,
- and how important is it?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-While a lot of research have been done on the relationship between early
- life health shocks and health as adults, this paper improves by on the
- literature by estimating how health changes over the life-cycle continuously.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-6) What are the major findings and conclusions? Do they make sense?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-7) Do you see any problems with the reasoning? What are the limitations
- of the data and methods? How could one improve upon this study?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskySeasonBirthHealth2020"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskySeasonBirthHealth2020"
-literal "false"
-
-\end_inset
-
- estimate health deficits for Europeans born on different months, to see
- if there is seasonal variation in the accumulation of health deficits.
- There is seasonal variation in a lot of diseases, for example diabetes
- have been shown to be affected by the birth month.
-\end_layout
-
-\begin_layout Standard
-They find a correlation between the season of birth and health deficits.
- Specifically, they find that men born in spring and summer are biologically
- older than men born in the fall or winter.
-\end_layout
-
-\begin_layout Standard
-They also use a non-linear least square estimation strategy, and they find
- also find the Makeham term to be 8 percent as they do in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
-.
- They further also find that 
-\begin_inset Formula $\widehat{\alpha}_{females}=0.057$
-\end_inset
-
- and 
-\begin_inset Formula $\widehat{\alpha}_{males}=0.069$
-\end_inset
-
-.
- They further also find that women are born with more deficits, but age
- less fast than men.
-\end_layout
-
-\begin_layout Standard
-They don’t find an effect for women.
-\end_layout
-
-\begin_layout Standard
-    
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Does women also show seasonality?
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The effect size is considerably low.
-\end_layout
-
-\begin_layout Standard
-They exclude Southern Europe from the regressions.
-\end_layout
-
-\begin_layout Standard
-This study is great for policy, because the natural experiments leads to
- extreme changes in variation of pregnant women.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskyHealthAgingRetirement2020"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this paper 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHealthAgingRetirement2020"
-literal "false"
-
-\end_inset
-
- estimate the health deficit model on the SHARE-dataset where they allow
- for different occupational-specific aging estimates.
-\end_layout
-
-\begin_layout Standard
-They find that blue collar workers accumulate deficits faster that white
- collar workers, that blue collar workers have health benefits from retirement,
- and that they still accumulate deficits faster after retirement compared
- to white collar workers.
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskySocialVulnerabilityAging2021"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this paper, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskySocialVulnerabilityAging2021"
-literal "false"
-
-\end_inset
-
- study the effects of social vulnerability on biological aging among the
- elderly in the United States.
-\end_layout
-
-\begin_layout Standard
-There is a belief that societies have become more lonely and individualistic.
- In his book ([Putnam, 2001](zotero://select/library/items/STTTFHJF)) argues
- that ….
-\end_layout
-
-\begin_layout Standard
-However, as 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskySocialVulnerabilityAging2021"
-literal "false"
-
-\end_inset
-
- write:
-\end_layout
-
-\begin_layout Standard
-“The existence of a loneliness epidemic, however, is not corroborated by
- scientific evidence.” 
-\begin_inset CommandInset citation
-LatexCommand citet
-after "page 1"
-key "abelianskySocialVulnerabilityAging2021"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-They argue that this is due to the difference between objective- and subjective
- loneliness.
-\end_layout
-
-\begin_layout Standard
-They use data from the Health and Retirement Study, out of which they create
- a Social Vulnerability Index (SVI) and a frailty index (FI).
- The data consists of 17602 elderly individuals.
-\end_layout
-
-\begin_layout Standard
-They create the SVI as they create the FI.
- That is, they divide number of social deficits by total potential social
- deficits.
-\end_layout
-
-\begin_layout Standard
-They find that the SVI is positively correlated with the FI.
-\end_layout
-
-\begin_layout Standard
-The effect of SVI on FI is not causal, and probably subject to reverse causality
- if for example disabled individuals are socially vulnerably due to their
- disability.
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Section
 Theoretical findings
 \end_layout
 
@@ -1790,7 +2692,7 @@ noprefix "false"
  The model
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "caseBrokenWorkSex2005"
@@ -1859,7 +2761,7 @@ A problem with the evidence is their use of self-reported health.
 Another problem is self-selection into manual work by health.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "dalgaardOptimalAgingDeath2014"
@@ -1871,7 +2773,22 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-In 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is the paper that develops the Health Deficit Model, so that there
+ isn't any extensions of the theoretical framework.
+ The main question 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "dalgaardOptimalAgingDeath2014"
@@ -1879,24 +2796,164 @@ literal "false"
 
 \end_inset
 
- they develop the Health Deficit Model, as an attempt to explain the Preston
- Curve.
- The Preston curve is the empirical observation, that, across countries,
- there is a concave relationship between income and life-expectancy.
+ answer in this paper is whether they can explain the Preston Curve using
+ the Health Deficit Model assuming a causal link from income to longevity.
+ The Preston Curve is the empirical regularity, that richer countries have
+ healthier populations, but that the function from income to health is concave.
 \end_layout
 
 \begin_layout Standard
-The simple explanation for their model is that, if income increases, then
+This question is important because there isn't a scientific consensus of
+ what creates the Preston Curve yet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The new theoretical concept is that health deterioates according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:law of motion of health capital"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The simple explanation for their model is that, if income increases, then
  because of diminishing marginal utility per period, the individual wants
  to smooth consumption, which it does by investing in health.
  The health investment increases longevity.
 \end_layout
 
 \begin_layout Standard
-Using this they find that they can fit the Preston Curve with 80% accuracy.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
 \end_layout
 
-\begin_layout Subsubsection
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They calibrate their model using US data and compare it against an estimated
+ Preston Curve.
+ The estimated Preston Curve is concave, but close to linear, because of
+ omission of childhood mortality (the HDM is only applicable from age 20).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Of the parameters calibrated, the force of aging is set according to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+ at 
+\begin_inset Formula $\mu=0.043$
+\end_inset
+
+, where 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+ estimates the value of the non-linear estimations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The paper improves upon previous research by evaluating the fit of the Preston
+ Curve with a micro-founded model of health.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They find that their calibrated model can explain 78% of the Preston Curve,
+ and they argue, that the residual can be explained either by reverse causality
+ or omitted variable bias.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They exclude child mortality and are missing a lot of poor countries.
+\end_layout
+
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "strulikHealthHump2015"
@@ -1908,35 +2965,51 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-According to the Permanent Income Hypothesis, a rational consumer should
- smooth consumption over all periods to maximize life-time utility.
- However, contrary to theory, the empirical consumption patterns exhibit
- a hump at the middle of life.
- Earlier explanations have included stuff like changing preferences and
- bequest motives.
- In 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "strulikHealthHump2015"
-literal "false"
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
 
 \end_inset
 
- he makes a simple model of life-cycle consumption, where he incorporates
- the health deficit model into the utility function.
- Building on empirical evidence for the lower marginal utility from lower
- health, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "strulikHealthHump2015"
-literal "false"
 
-\end_inset
-
- makes the following utility function
 \end_layout
 
 \begin_layout Standard
+In this paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikHealthHump2015"
+literal "false"
+
+\end_inset
+
+ provides a simple explanation for the hump-shaped age-consumption profile.
+ Explanations for the hump-shaped age-consumption profile is important,
+ because there isn't consensus, yet, about the mechanisms behind it.
+ Standard theory predicts consumptions smoothing, which means that no hump
+ should be seen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper creates a utility extension, by letting utility depend on health:
+ 
 \begin_inset Formula 
 \[
 u\left(c,D\right)=D^{-\alpha}\cdot\tilde{u}\left(c\right)
@@ -1944,26 +3017,59 @@ u\left(c,D\right)=D^{-\alpha}\cdot\tilde{u}\left(c\right)
 
 \end_inset
 
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a parameter, and 
+\begin_inset Formula $\tilde{u}\left(c\right)$
+\end_inset
+
+ is the utility of consumption.
+ He further assumes that 
+\begin_inset Formula $h\left(t\right)=0\forall t$
+\end_inset
+
+, so deficit accumulation is exogenous in the model.
+ There exists a closed form solution of the time of consumption peak, and
+ peak consumption level
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Because there is a closed form solution, it is possible to create a Desmos-graph
+ of the model with different parameter values: 
+\begin_inset CommandInset href
+LatexCommand href
+name "Link"
+target "https://www.desmos.com/calculator/1fgfw0hlxa"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, which is
+\begin_inset Formula 
+\begin{align*}
+T & =\frac{1}{\mu}\log\left(\frac{(r-\rho)E}{\alpha\mu-(r-\rho)B}\right)\\
+c\left(t\right) & =c_{0}\mathrm{e}^{1/\sigma[(r-\rho)t-\alpha\log(E+B\exp(\mu t)+\alpha\log(E+B)]}
+\end{align*}
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-This simple extension leads to a hump shaped consumption profile.
- The intuition is as follows: Initially, the utility gain from saving is
- higher than the utility loss from deficit accumulation.
- However, as deficit accumulation increases, the utility loss eventually
- gets larger and larger.
- The utility is then maximized when
-\end_layout
-
-\begin_layout Standard
-    
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Strulik changes the life-time utility function, and simplifies the law of
- motion of capital.
+4) What parameter values are calibrated? Are you convinced by it?
 \end_layout
 
 \end_inset
@@ -1971,11 +3077,586 @@ Strulik changes the life-time utility function, and simplifies the law of
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+The calibrations of the model are as follows
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Values
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Source
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Calibration
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.043$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.02$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r-\rho$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.008$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Calibration
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.00312$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chetty et al., 2006
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The calibrated values are such that 
+\begin_inset Formula $T$
+\end_inset
+
+ is around the empirical findings.
+ Empirical research further restricts the value of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, which means that it is the interest-rate-differential that are calibrated
+ in the sense that it has the highest degrees of freedom.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While previous research have attempted to explain it by behavioral biases,
+ this paper shows that the hump can be rationally explained, given biological
+ constraints.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The major findings are that a simple health deficit model, with the proper
+ parameter values, can explain the hump-shaped age-consumption profile.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sensitivity analysis shows that the health hump is only observed (in this
+ model) when the interest-rate-differential is between 0.008 and 0.011.
+ This is because for higher values of 
+\begin_inset Formula $r-\rho$
+\end_inset
+
+ the consumption explode.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename desmos-graph.png
+	lyxscale 60
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interest_rate_differential"
+
+\end_inset
+
+Consumption at the peak for different values of 
+\begin_inset Formula $r-\rho$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+The other parameter values are the same as in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikHealthHump2015"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The graph was made in Desmos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Interest_rate_differential"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ I have graphed the values of the consumption at the peak, 
+\begin_inset Formula $c\left(T\right)$
+\end_inset
+
+, for different values of 
+\begin_inset Formula $r-\rho$
+\end_inset
+
+.
+ The consumption explodes at values of 
+\begin_inset Formula $r-\rho$
+\end_inset
+
+ over 0.011 at the given parameter-values.
+ The health-hump model by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "strulikHealthHump2015"
+literal "false"
+
+\end_inset
+
+ is therefore too sensitive to parameter values to provide an alternative
+ to the behavioral explanations of the hump-based age-consumption
+\end_layout
+
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "dalgaardAccountingFetalOrigins2017"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This paper compares the Health Capital Model and the Health Deficit Model
+ in the ability to explain and make predicitions of the Fetal Origins Hypothesis
+: The hypothesis that many late-life health outcomes are caused by health
+ shocks in utero.
+ This is important not just for theoretical reasons, but also for empirical
+ ones, as a better theory provides better testable predictions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They introduce a childhood period to the model in this paper, which is a
+ period of exogenous investment in health from parents.
+\end_layout
+
+\begin_layout Standard
+They also derive the health deficit accumulation equation from reliability
+ theory.
+ This suggests that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
 
 \end_inset
 
@@ -2041,11 +3722,105 @@ They change the HDI-equation to include a childhood-period.
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "dalgaardGenesisGoldenAge2017"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
 
 \end_inset
 
@@ -2113,11 +3888,105 @@ They add an equation for wages.
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citet
 key "schunemannGenderGapMortality2017"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
 
 \end_inset
 
@@ -2234,11 +4103,105 @@ They then give the women the same preferences as men, and this reduces the
  and behavior.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "strulikReturnEducationTerms2018"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
 
 \end_inset
 
@@ -2312,11 +4275,105 @@ status open
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "dalgaardFetalOriginsLife2021"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
 
 \end_inset
 
@@ -2383,11 +4440,105 @@ For the childhood development phase, the frailty index is convex in age,
 A problem with the model is the kink at age 20.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "strulikPainPatientJunkie2021"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
 
 \end_inset
 
@@ -2436,11 +4587,105 @@ ms/CMQZRINZ))?
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset CommandInset citation
 LatexCommand citetitle
 key "strulikHookedWeightControl2021"
 literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1) What is the main question examined and why is it important?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2) What is the new theoretical concept.
+ How does it make sense.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+3) What data do they use to calibrate their model?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+4) What parameter values are calibrated? Are you convinced by it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5) How does the paper improve upon previous research? What is its contribution,
+ and how important is it?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+6) What are the major findings and conclusions? Do they make sense?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+7) Do you see any problems with the reasoning? How could one improve upon
+ this study?
+\end_layout
 
 \end_inset
 
@@ -2498,14 +4743,6 @@ Shouldn’t the models also have a health deficit of 0.7 at age 101 (the life-sp
 
 \end_layout
 
-\begin_layout Subsection
-Explaining paradoxes
-\end_layout
-
-\begin_layout Subsection
-Future directions
-\end_layout
-
 \begin_layout Section
 Conclusion
 \end_layout
@@ -2514,8 +4751,7 @@ Conclusion
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
-bibfiles "Health_Deficit_Model"
-options "plain"
+bibfiles "Health_Deficit_Model,Health Deficit Model_work_pc"
 
 \end_inset
 
