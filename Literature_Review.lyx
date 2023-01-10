@@ -70,6 +70,11 @@
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch Introduction
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -113,7 +118,7 @@ Henrik Hansen
 \begin_layout Standard
 \begin_inset Branch Outline
 inverted 0
-status open
+status collapsed
 
 \begin_layout Enumerate
 Introduction
@@ -199,7 +204,7 @@ Conclusion
 \begin_layout Standard
 \begin_inset Branch To do
 inverted 0
-status open
+status collapsed
 
 \begin_layout Itemize
 Make a section where you write about the SHARE-dataset (DRY-principle)
@@ -239,9 +244,8 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-In this literature review I will review the literature on the Health Deficit
- Model.
- The Health Deficit Model is a model developed by 
+I will in this paper review the empirical litterature on the Health Deficit
+ Model by 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "dalgaardOptimalAgingDeath2014"
@@ -249,8 +253,9 @@ literal "false"
 
 \end_inset
 
-, with the intent to provide an alternative to the Health Capital Model
- by 
+.
+ The model explains the aging process as the accumulation of health deficits
+ over time, which is in contrast with Health Capital Model by 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "grossmanConceptHealthCapital1972"
@@ -258,7 +263,8 @@ literal "false"
 
 \end_inset
 
- - the standard model of health in health economics.
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -304,11 +310,7 @@ where
 \end_inset
 
 .
- In short, there are 
-\series bold
-X
-\series default
- empirical problems with the Health Capital Model.
+ In short, there are 3 empirical problems with the Health Capital Model.
  Firstly, from 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -320,7 +322,7 @@ noprefix "false"
 \end_inset
 
 , the amount of depreciation is increasing in health capital, which imply
- that healthy individuals lose more health per period..
+ that healthy individuals lose more health per period.
  Secondly, if the depreciation rate is constant, then life is infinite.
  This follows from solving equation 
 \begin_inset CommandInset ref
@@ -356,30 +358,9 @@ which is only equal to
  life is infinite.
  As many health choices revolves around end-of-life care, it makes the Health
  Capital Model hard to use empirically.
- Thirdly, health is a latent variable, which is hard to measure.
+ Thirdly, health is a latent variable, which is hard to measure empirically.
  These three problems with the Health Capital Model justify looking for
  alternative theoretical models to base testable predictions on.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I need some sharper arguments against the Health Capital Model.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To understand the foundations of the Health Deficit Model, I provide a quick
- recap of the frailty index and reliability theory
-\end_layout
-
-\begin_layout Standard
-In section...
- frailty index, in section ...
- reliability theory in 
 \end_layout
 
 \begin_layout Section
@@ -3593,7 +3574,7 @@ They introduce a childhood period to the model in this paper, which is a
 \begin_layout Standard
 They also derive the health deficit accumulation equation from reliability
  theory.
- This suggests that
+ Reliability Theory is the study of aging of mechanical systems.
 \end_layout
 
 \begin_layout Standard
@@ -3637,12 +3618,177 @@ status open
 \end_layout
 
 \begin_layout Standard
+This paper derives the Health Deficit Model from Reliability Theory
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 6) What are the major findings and conclusions? Do they make sense?
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One of the major findings in this paper are not, necessarily, the inclusion
+ of the childhood period, but insted the derivation of the Health Deficit
+ Model from Reliability Theory.
+ The Reliability Theory of biological organisms states that humans are 
+\begin_inset Quotes xld
+\end_inset
+
+like machines, made up of redundant parts, many of which are defective from
+ the start
+\begin_inset Quotes xrd
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Reference to the why-we-fall-apart.pdf
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If we take seriously that reliability theory should be at the foundation
+ of health models, because humans age like machines, then we should at least
+ also use reliability theory in our capital accumulation models.
+ If biological and mechanical systems deterioate in the same manner, then
+ they should be modeled equally.
+ This implies that the capital accumulation equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Law of motion of capital"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ should be replaced with something like
+\begin_inset Formula 
+\[
+D_{k}\left(t\right)=E+Be^{\mu t}\Rightarrow\dot{D}_{k}\left(t\right)=\mu\left(D_{k}\left(t\right)-E\right),
+\]
+
+\end_inset
+
+in steady state 
+\begin_inset Formula $K^{\prime}\left(t\right)=Y\left(t\right)-C\left(t\right)-D_{k}\left(t\right)=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+K^{\prime}\left(t\right)=0\iff Y\left(t\right)-C\left(t\right)=S\left(t\right)=D_{k}\left(t\right)=E+Be^{\mu t}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $S\left(t\right)=sY\left(t\right)=\left(1-s\right)C\left(t\right)$
+\end_inset
+
+.
+ The growth in savings in steady state would be where
+\begin_inset Formula 
+\begin{align*}
+g_{s}\left(t\right)\equiv\frac{S^{\prime}\left(t\right)}{S\left(t\right)} & =\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}=\frac{D_{k}^{\prime}\left(t\right)}{D_{k}\left(t\right)},
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $g_{s}\left(t\right)=\mu$
+\end_inset
+
+ for 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $E$
+\end_inset
+
+ is capital shocks with mean 
+\begin_inset Formula $0$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, then for a negative shock (suddenly higher deterioation of capital), the
+ social planner would increase growth rate in savings by 
+\begin_inset Formula 
+\[
+-\frac{\partial g_{s}\left(t\right)}{\partial E}=\frac{D_{k}^{\prime}\left(t\right)}{D_{k}\left(t\right)^{2}}=\frac{g_{s}\left(t\right)}{D_{k}\left(t\right)}
+\]
+
+\end_inset
+
+which would disappear in the long run as 
+\begin_inset Formula $g_{s}\left(t\right)\rightarrow\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{k}\left(t\right)\rightarrow\infty$
+\end_inset
+
+.
+ However, this would imply that savings should always increase as
+\begin_inset Formula 
+\begin{align*}
+g_{s}\left(t\right) & =\frac{S^{\prime}\left(t\right)}{S\left(t\right)}=\frac{Y^{\prime}\left(t\right)-C^{\prime}\left(t\right)}{Y\left(t\right)-C\left(t\right)}\\
+ & =\frac{g_{Y}Y\left(t\right)-g_{C}C\left(t\right)}{Y\left(t\right)-C\left(t\right)}\\
+\frac{g_{Y}Y\left(t\right)-g_{C}C\left(t\right)}{Y\left(t\right)-C\left(t\right)} & =\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\\
+g_{Y}Y\left(t\right)-g_{C}C\left(t\right) & =\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\left[Y\left(t\right)-C\left(t\right)\right]\\
+\left(g_{Y}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right)Y\left(t\right) & =\left(g_{Y}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right)C\left(t\right)\\
+\frac{Y\left(t\right)}{C\left(t\right)} & =\frac{g_{Y}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}}{g_{C}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}}\\
+\frac{s}{1-s} & =\frac{g_{Y}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}}{g_{C}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}}\\
+s\left(g_{C}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right) & =\left(1-s\right)\left(g_{Y}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right)\\
+s\left(g_{C}+g_{Y}-2\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right) & =\left(g_{Y}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right)\\
+s & =\frac{\left(g_{Y}-\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right)}{\left(g_{C}+g_{Y}-2\frac{\mu Be^{\mu t}}{E+Be^{\mu t}}\right)}\\
+s & =\frac{\left(g_{Y}-\mu\right)}{\left(g_{C}+g_{Y}-2\mu\right)} & \left(\text{Long run}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The savings rate in the long rung is affected by the force of mortality
+ of physical capital as
+\begin_inset Formula 
+\begin{align*}
+\frac{ds}{d\mu} & =\frac{-1\left(g_{C}+g_{Y}-2\mu\right)-\left(-2\right)\left(g_{Y}-\mu\right)}{\left(g_{C}+g_{Y}-2\mu\right)^{2}}\\
+ & =\frac{g_{Y}-g_{C}}{\left(g_{C}+g_{Y}-2\mu\right)^{2}}\begin{cases}
+>0 & g_{Y}>g_{C}\\
+<0 & g_{Y}<g_{C}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+but more importantly
+\begin_inset Formula 
+\begin{align*}
+\frac{ds}{dg_{Y}} & =\frac{\left(g_{C}+g_{Y}-2\mu\right)-\left(g_{Y}-\mu\right)}{\left(g_{C}+g_{Y}-2\mu\right)^{2}}\\
+ & =\frac{g_{C}-\mu}{\left(g_{C}+g_{Y}-2\mu\right)^{2}}
+\end{align*}
 
 \end_inset
 
@@ -3747,6 +3893,22 @@ status open
 \end_layout
 
 \begin_layout Standard
+In this paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dalgaardGenesisGoldenAge2017"
+literal "false"
+
+\end_inset
+
+ answers the question of what factors are behind the increase in longevity
+ from 1850 to 1940.
+ This is an important question for public finance, because of the cost-burden
+ of the elderly.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -3758,6 +3920,14 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+They create a new equation for wages, that is decreasing in health deficits,
+ but increasing in experience over time.
+ The representative agent is choosing consumption and whether to work or
+ not (retire).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3774,12 +3944,293 @@ status open
 \end_layout
 
 \begin_layout Standard
+They calibrate the model against US data, for a white average man, who retired
+ at year 2000.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
 4) What parameter values are calibrated? Are you convinced by it?
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Values
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Source
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.013$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Calibration
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.043$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.02$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.06$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Barro et al.
+ (1995)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0031$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chetty et al., 2006
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
@@ -3798,6 +4249,10 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+This paper improves upon previous research by using a capital accum
 \end_layout
 
 \begin_layout Standard
