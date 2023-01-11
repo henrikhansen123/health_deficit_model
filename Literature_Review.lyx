@@ -215,11 +215,26 @@ inverted 0
 status open
 
 \begin_layout Itemize
-Write that you use different simplified notation than in the studies.
+\begin_inset Formula $t$
+\end_inset
+
+ should be 
+\begin_inset Formula $age$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Write about Mundlak regressions
+Write that 
+\begin_inset Formula $w$
+\end_inset
+
+ is time.
+\end_layout
+
+\begin_layout Itemize
+The estimates in health and retirement ages don't make sense.
 \end_layout
 
 \end_inset
@@ -228,31 +243,67 @@ Write about Mundlak regressions
 \end_layout
 
 \begin_layout Section
-Introduction
+Aging as deficit accumulation
 \end_layout
 
 \begin_layout Standard
-I will in this paper review the empirical litterature on the Health Deficit
- Model by 
+Biology have found 3 empirical laws/regularities of mortality: 1) The (Makeham)-
+Gompertz law of mortality, 2) the law of compensating mortality, and 3)
+ the law of late-life mortality plateau 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "dalgaardOptimalAgingDeath2014"
+LatexCommand citep
+key "gavrilovReliabilityTheoryAging2005"
 literal "false"
 
 \end_inset
 
 .
- The model explains the aging process as the accumulation of health deficits
- over time, which is in contrast with Health Capital Model by 
+ The first law, the (Makeham)-Gompertz law of mortality, states that the
+ mortality rate is increasing exponentially with age.
+ The second law, the law of compensating mortality, states that groups with
+ high initial mortality experience a slower increase in mortality, so that
+ mortality rates intersect.
+ The third law, the law of late-life mortality plateau, states that mortality
+ rates stop increasing at a high age
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+There is controversy over whether this is a law, or whether really old people
+ are lying about their age 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
+key "gavrilovLatelifeMortalityUnderestimated2019"
+literal "false"
+
+\end_inset
+
+, when their age can't be confirmed
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The canonical model of health development, the Health Capital Model 
+\begin_inset CommandInset citation
+LatexCommand citep
 key "grossmanConceptHealthCapital1972"
 literal "false"
 
 \end_inset
 
-.
+, can't explain any of these laws, as people live forever in the model,
+ and so do not have a mortality rate.
+ While it is possible to extend the model to encompass the laws of mortality,
+ I will in instead review the (economic) empirical literature on model build
  
+\emph on
+from
+\emph default
+ the mortality laws: The Health Deficit Model.
 \end_layout
 
 \begin_layout Standard
@@ -352,16 +403,15 @@ which is only equal to
 \end_layout
 
 \begin_layout Standard
-The key equation of the Health Deficit Model comes from the ideas of the
- frailty index by 
+An alternative model, the Health Deficit Model by 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "mitnitskiAccumulationDeficitsProxy2001"
+key "dalgaardOptimalAgingDeath2014"
 literal "false"
 
 \end_inset
 
-, and is as follows:
+, is life-cycle models who use
 \end_layout
 
 \begin_layout Standard
@@ -372,15 +422,23 @@ D\left(t\right)=E+Be^{\mu t},\label{Makeham-Gompertz Law}
 
 \end_inset
 
-where 
-\begin_inset Formula $D\left(t\right)$
+as a foundation for the evolution health deficits.
+ Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Makeham-Gompertz Law"
+plural "false"
+caps "false"
+noprefix "false"
+
 \end_inset
 
- is the accumulated deficits at time 
-\begin_inset Formula $t$
+ is the Makeham-Gompertz law of mortality applied to deficit accumulation.
+ Deficits, 
+\begin_inset Formula $D\left(.\right)$
 \end_inset
 
-, 
+, are all the health related diseases, signs, symptions, etc., 
 \begin_inset Formula $E$
 \end_inset
 
@@ -389,11 +447,15 @@ where
 \begin_inset Formula $Be^{\mu t}$
 \end_inset
 
- is the Gompertz term, and 
+ is the Gompertz term, 
 \begin_inset Formula $\mu$
 \end_inset
 
- is the force of aging.
+ is the force of aging, and 
+\begin_inset Formula $t$
+\end_inset
+
+ is the age of the individual.
  As is clear from 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -482,11 +544,7 @@ It is then assumed that
 \begin_inset Formula $h\left(t\right)$
 \end_inset
 
- is health investments at time 
-\begin_inset Formula $t$
-\end_inset
-
-, 
+ is health investments, 
 \begin_inset Formula $A>0$
 \end_inset
 
@@ -649,8 +707,8 @@ noprefix "false"
  to the problem.
 \end_layout
 
-\begin_layout Section
-Background
+\begin_layout Subsection
+Reliability theory - The foundation of the model
 \end_layout
 
 \begin_layout Standard
@@ -683,14 +741,39 @@ Reliability theory is a sub-discipline of systems engineering (the study
 \end_layout
 
 \begin_layout Standard
-In reliability theory, a system is aging, if the probability that it dies
+In reliability theory, a system is aging if the probability that it dies
  increases, i.e.
  the mortality rate increases.
- A system whose mortality rate isn't increasing is said to be non-aging.
- A non-aging system is, however, not immortal, but it can only die by a
- constant probability.
+ A system whose mortality rate does not increase is not aging.
+ A non-aging system is not immortal though, but it can only die by random
+ chance.
  Importantly, reliability theory assumes that all the systems' components
- are non-aging.
+ are non-aging so that aging is an emergent property.
+ The intuition is as follows: If a system is build of non-aging redundant
+ components, so that aging is an emergent property, then as the the individual
+ components fail, the system gets closer to a one component system, i.e.
+ a non-aging system.
+ This was what was empirically observed for some animals and humans, as
+ the mortality rate stabilized around the human life-span 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gavrilovReliabilityTheoryAging2005"
+literal "false"
+
+\end_inset
+
+.
+ These late-life estimates for humans are now being treated with caution,
+ as they are probably severely biased, so that late-life mortality rates
+ are underestimated 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gavrilovLatelifeMortalityUnderestimated2019"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -723,7 +806,7 @@ where
 \begin_inset Formula $n$
 \end_inset
 
- is the number of components in parallel, 
+ is the number of non-aging components in parallel, 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -732,10 +815,7 @@ where
 \end_inset
 
  is time.
- However, as this derivation is build from reliability theory, it will also
- satisfy some of the more problematic behaviors: Late-life mortality/deficit
- plateau.
- While it is true that 
+ Equation 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:reliability_deficits"
@@ -749,38 +829,81 @@ noprefix "false"
 \begin_inset Formula $t$
 \end_inset
 
-, there is a late-life deficit plateau for 
+, but there is a late-life deficit plateau for high 
 \begin_inset Formula $t$
 \end_inset
 
- high enough.
- This is empirically how machines age, as they converge to a non-aging system.
- The intuition is as follows: If a system is build of non-aging redundant
- components, so that aging is an emergent property, then as the the individual
- components fail, the closer the system gets to be a system of one component,
- i.e.
- a non-aging system.
- This was what were empirically observed for some animals and humans too,
- as the mortality rate stabilized around the human life-span 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "gavrilovReliabilityTheoryAging2005"
-literal "false"
+.
+ This is empirically how machines, like computers, age, as they converge
+ to a non-aging system.
+ I have graphed equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:reliability_deficits"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:reliability_deficits"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for values of 
+\begin_inset Formula $\lambda=0.5$
+\end_inset
+
+ and 
+\begin_inset Formula $n=1000$
+\end_inset
+
 .
- These late-life estimates are now being treated with caution, as they are
- probably severely biased, so that late-life mortality rates are underestimated
+ I can't explain why the mortality rate explodes in volatility at the end
+ of the domain of the function.
+\end_layout
+
+\begin_layout Standard
+From equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:reliability_deficits"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
  
 \begin_inset CommandInset citation
-LatexCommand citep
-key "gavrilovLatelifeMortalityUnderestimated2019"
+LatexCommand citet
+key "dalgaardAccountingFetalOrigins2017"
 literal "false"
 
 \end_inset
 
-.
+ theoretically derive equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Makeham-Gompertz Law"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (with 
+\begin_inset Formula $M=0$
+\end_inset
+
+), so that the Health Deficit Model has theoretical microfoundations from
+ biology and engineering.
 \end_layout
 
 \begin_layout Standard
@@ -876,48 +999,14 @@ literal "false"
 
 \end_layout
 
-\begin_layout Standard
-I have graphed equation 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:reliability_deficits"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:reliability_deficits"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- for values of 
-\begin_inset Formula $\lambda=0.5$
-\end_inset
-
- and 
-\begin_inset Formula $n=1000$
-\end_inset
-
-.
- Ignoring the late-late-life volatility, what is stark about this picture
- is the not-empirically validated late-life mortality plateau.
- As the whole point of building the Health Deficit Model is to explain aging,
- it is theoretically problematic that they use a model from reliability
- theory, that isn't empirically validated for humans yet.
-\end_layout
-
 \begin_layout Subsection
-The Health Deficit Index
+Deficit as a proxy for mortality
 \end_layout
 
 \begin_layout Standard
+Theoretical microfoundations are great for model calibrations, if there
+ are high precision estimates of the parameters of the foundations.
+ These parameters have been estimated and studied by 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "mitnitskiAccumulationDeficitsProxy2001"
@@ -925,9 +1014,10 @@ literal "false"
 
 \end_inset
 
- create a Health Deficit Index (also known as a Frailty Index), that they
- show is exponentially increasing with age, is Gamma-distributed and is
- able to predict mortality with great precision.
+ where they create a Health Deficit Index (also known as a Frailty Index)
+ as a proxy for biological aging.
+ They show that the index is exponentially increasing with age, is Gamma-distrib
+uted and is able to predict mortality with great precision.
 \end_layout
 
 \begin_layout Standard
@@ -939,7 +1029,9 @@ The Health Deficit Index is the sum of health deficits over the sum of potential
  that for 2194 elderly canadians the distribution of the Health Deficit
  Index follows a Gamma-distribution, which is used in reliability theory
  for estimating the redundancies of systems.
- They estimate equation 
+ This provides an empirical justification for the microfoundations from
+ reliability theory.
+ They further estimate equation 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:Gompertz-law"
@@ -949,7 +1041,8 @@ noprefix "false"
 
 \end_inset
 
- and find that their sample accumulate 3.3% deficts each year.
+, the Gompertz law of mortality applied to deficit accumulation, and find
+ that their sample accumulates 3.3% deficts each year.
 \end_layout
 
 \begin_layout Standard
@@ -962,16 +1055,9 @@ literal "false"
 \end_inset
 
  they extend their analysis for the Health Deficit Index to include gender
- and multiple age groups for a larger sample.
-\end_layout
-
-\begin_layout Standard
-They find that women have higher deficits than men, but they accumulate
- them more slowly.
-\end_layout
-
-\begin_layout Standard
-They find that the force of aging, 
+ and multiple age groups and a larger sample, where they find that women
+ have higher deficits than men, but they accumulate them more slowly.
+ More specifically they find that the force of aging, 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -983,7 +1069,11 @@ They find that the force of aging,
 \begin_inset Formula $0.031$
 \end_inset
 
- for women, and that the Makeham term is 
+ for women, and that the Makeham term, 
+\begin_inset Formula $M$
+\end_inset
+
+, is 
 \begin_inset Formula $0.00312$
 \end_inset
 
@@ -992,26 +1082,12 @@ They find that the force of aging,
 \end_inset
 
  for women.
- All estimates are from non-linear least squares, and is esitimated with
+ All estimates are from non-linear least squares, and is estimated with
  high precision.
 \end_layout
 
-\begin_layout Standard
-The data is from the Canadian National Population Health Survey is more
- than 10 times larger than in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "mitnitskiAccumulationDeficitsProxy2001"
-literal "false"
-
-\end_inset
-
-, and they estimate it for multiple different age groups, and not just the
- elderly.
-\end_layout
-
 \begin_layout Section
-Empirical findings
+Empirical economics research on the Health Deficit Model
 \end_layout
 
 \begin_layout Standard
@@ -1047,7 +1123,7 @@ noprefix "false"
 
 \end_inset
 
- is defined as the Gompertz equation, and 
+ is the empirical version of the Gompertz equation, and 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:Makeham-Gompertz_empirical"
@@ -1057,7 +1133,8 @@ noprefix "false"
 
 \end_inset
 
- is defined as the Makeham-Gompertz equation.
+ is the empirical version of the Makeham-Gompertz equation.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1099,11 +1176,10 @@ noprefix "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-However, the fixed effects estimates will also be inconsistent if the time-varyi
-ng unobservables are correlated with 
+ Mundlak regressions are random effects models with individual time-means
+ as controls.
+ The fixed effects estimates will also be inconsistent if the time-varying
+ unobservables are correlated with 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1122,50 +1198,20 @@ ng unobservables are correlated with
 \end_inset
 
 .
- I will not criticize the empirical papers for the time-varying errors.
+ I will not criticize the empirical papers based on the time-varying errors.
 \end_layout
 
 \begin_layout Standard
-In the Health Deficit Model, the variable 
-\begin_inset Formula $M$
-\end_inset
-
- is all the per period external and internal factors that determine health.
- As 
-\begin_inset Formula $M$
-\end_inset
-
- includes the individuals own health investments, I suspect that 
-\begin_inset Formula $M$
-\end_inset
-
- is (negatively) correlated with 
-\begin_inset Formula $G$
-\end_inset
-
- and 
-\begin_inset Formula $\mu$
-\end_inset
-
-, so that 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Gompertz_empirical"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- is inconsistent.
-\end_layout
-
-\begin_layout Standard
-In all of the studies they create a health deficit index from the Survey
+In most of the studies they create a health deficit index from the Survey
  of Health, Aging and Retirement in Europe (SHARE) dataset, that includes
  over 140,000 individuals over the age of 50 from 20 European countries.
  The SHARE dataset is created by repeated sampling of retirerees in Europe,
  so it has a panel-structure.
+ Every repetition of sampling, wave, is denoted by a 
+\begin_inset Formula $w$
+\end_inset
+
+ subscript in the estimated equations.
 \end_layout
 
 \begin_layout Standard
@@ -1181,11 +1227,1625 @@ literal "false"
  Basically, it measures the share of deficits to potential deficits, where
  potential deficits are the number of defictis the survey-participant responds
  to.
+\end_layout
+
+\begin_layout Standard
+I will in the conclusion 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+ estimates equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Gompertz_empirical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Makeham-Gompertz_empirical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for men and women, and across European countries.
+ Contrary to previous research on health deficits with the SHARE dataset,
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHowWeFall2017"
+literal "false"
+
+\end_inset
+
+ exploit that SHARE is a panel-dataset to estimate individual fixed effects
+ and random effect regressions.
+ These panel-data methods allow them to show whether the biology laws hold
+ at the individual level.
+ This contribution is important for theoretical work that use the health
+ deficit model with a representative agent.
+\end_layout
+
+\begin_layout Standard
+The estimation procedure uses OLS, fixed effects, random effects and Mundlak-reg
+ressions.
+ The linear estimates of the force of aging, 
+\begin_inset Formula $\mu$
+\end_inset
+
+, doesn't change much across the estimation strategies, but they are negatively
+ correlated with the Gompertz term.
+ This imply that there exist an age where two groups have the same value
+ of deficits, just like with mortality.
+ The same is true for the non-linear estimates, but for these non-linear
+ estimates the force of aging are much higher than in the linear estimates.
+ From these non-linear estimates, they calculate the age of intersection
+ of deficit accumulation for women and men, and for different countries.
+ They find that the estimates coincide with those from the empirical litterature
+ on mortality.
+\end_layout
+
+\begin_layout Standard
+They find that non-linear estimates are much higher than the linear estimates
+ and that the compensating law of mortality also holds for deficit accumulation
+ across gender and European countries.
+\end_layout
+
+\begin_layout Standard
+The estimates in the table below show that including the Makeham-term increases
+ the force of aging, 
+\begin_inset Formula $\mu$
+\end_inset
+
+, by almost 5 percentage point for men and 3 percentage point for women.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Linear estimates
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-linear estimates
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Paremeter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Female
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Male
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Female
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Male
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.029
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.026
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.052
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.073
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.02012
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.01584
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0003
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.075
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.076
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHungryChildrenAge2018"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHungryChildrenAge2018"
+literal "false"
+
+\end_inset
+
+ estimate the correlation between hunger episodes at early childhood and
+ deficit accumulation.
+ They estimate the following equations from the SHARE dataset:
+\begin_inset Formula 
+\begin{align*}
+\ln D_{\text{igw }} & =r_{g}+\mu_{g}t_{igw}+\gamma_{g}\text{hunger}_{ig}+\varepsilon_{igw}\\
+D_{ig} & =A_{g}+R_{g}\cdot e^{\mu_{g}t_{iw}}\cdot e^{\gamma_{g}\text{hunger}_{i}}+\varepsilon_{igw}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\text{hunger}$
+\end_inset
+
+ is a dummy variable.
+ The first equation is estimated by OLS, random effects and Mundlak, and
+ the second equation by non-linear least squares.
+\end_layout
+
+\begin_layout Standard
+They use OLS, random effects and Mundlak regressions.
+ They do not use fixed effects, because hunger episodes are constant across
+ time per individual.
+ They cluster the SE at country and year-of-birth level.
+ Clustering at country-level and year-of-birth-level makes sense according
+ to the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abadieWhenShouldYou2022"
+literal "false"
+
+\end_inset
+
+ framework for clustering, as the SHARE-dataset is sampled first at country
+ level, then at year-of-birth-level inside these clusters of countries.
+ They further use non-linear regressions to relax the assumption that the
+ Makeham-term, 
+\begin_inset Formula $M$
+\end_inset
+
+, is 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+While the parameters of the Health Deficit Model, 
+\begin_inset Formula $\mu$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+, are close to those found in other settings, the regression coefficient
+ of hunger, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, is between 0.218 and 0.547 depending on gender, estimated equation and estimatio
+n strategy.
+ The deficit factor, 
+\begin_inset Formula $\frac{D(\text{ hunger })}{D(\text{non-hunger})}$
+\end_inset
+
+, from the non-linear estimates, starts at 1 at 
+\begin_inset Formula $t=0$
+\end_inset
+
+ and converge towards 
+\begin_inset Formula $e^{\gamma}=e^{0.547}=1.72806$
+\end_inset
+
+ (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:deficit_factor_convergence"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for the trajectory for the non-linear estimates).
+\end_layout
+
+\begin_layout Standard
+The paper improves upon the litterature by showing how early life health
+ shocks, in the form of hunger episodes, are correlated with biological
+ aging.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename deficit_factor_convergence.png
+	lyxscale 60
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:deficit_factor_convergence"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The deficit factor, 
+\begin_inset Formula $\frac{D\left(\text{Hunger}\right)}{D\left(\text{Non-hunger}\right)}$
+\end_inset
+
+, from 
+\begin_inset Formula $D\left(t\right)=M+Ge^{\mu t}e^{\gamma}$
+\end_inset
+
+ with 
+\begin_inset Formula $M=0.0772$
+\end_inset
+
+, 
+\begin_inset Formula $G=0.0002$
+\end_inset
+
+, 
+\begin_inset Formula $\mu=0.0810$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma=0.547$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+The deficit factor converges to 
+\begin_inset Formula $e^{0.547}=1.72806$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Made in Desmos.
+ For different parameter values 
+\begin_inset CommandInset href
+LatexCommand href
+name "click here"
+target "https://www.desmos.com/calculator/wvna1tvqsk"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They can't use fixed effects, because hunger at childhood isn't time-invariant.
+ There is then a risk that the time-invariant unobservables are correlated
+ with the dummy for hunger.
+ For example if health is genetic, so it affects earning potential.
+ Then a reasonable Directed Acyclic Graph of the time-invariant unobservables
+ would look like the one in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Directed-Acyclic-Graph"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In the figure, the Back-door criteria is violated, so the effect of hunger
+ on deficit accumulation is not identified 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cinelliCrashCourseGood2020,pearlCausalInferenceStatistics2009"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% This code uses the tikz package
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v0) at (5,0) {Deficit Accumulation};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v1) at (0,0) {Hunger};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v2) at (2.5,3) {Health of parents};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v3) at (0,2) {Income of parents};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v4) at (5,2) {Health of individual}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (v1) edge (v0); 
+\backslash
+draw [->] (v2) edge (v3); 
+\backslash
+draw [->] (v3) edge (v1); 
+\backslash
+draw [->] (v2) edge (v4); 
+\backslash
+draw [->] (v4) edge (v0); 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Directed-Acyclic-Graph"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Directed Acyclic Graph (DAG) of how the lack of fixed effects are making
+ the estimates inconsistent in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHungryChildrenAge2018"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Made with Tikz.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskySeasonBirthHealth2020"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySeasonBirthHealth2020"
+literal "false"
+
+\end_inset
+
+ estimates how season of birth is correlated with biological aging.
+ There has been many studies that link season of birth to longevity, by
+ showing how it affects certain diseases and health deficits.
+ In this paper 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySeasonBirthHealth2020"
+literal "false"
+
+\end_inset
+
+ estimates how season of birth affects health and longevity in the aggregate,
+ i.e.
+ how it affects the deficit acummulation.
+\end_layout
+
+\begin_layout Standard
+The Fetal Origins Hypothesis states that small early life health shocks,
+ can have large health consequences late in life.
+ Such an early life health shock is the season of birth.
+ While season of birth have been shown to affect the probability of developing
+ diseases and other types of health deficits, it is unknown how season of
+ birth affects the aging process itself, i.e.
+ the accumulation of health deficits.
+\end_layout
+
+\begin_layout Standard
+They cannot use fixed effects to estimate the correlations, as season of
+ birth is time-invariant, so they run OLS, random effects and Mundlak regression
+s.
+ Compared to in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHungryChildrenAge2018"
+literal "false"
+
+\end_inset
+
+, there is reason to believe that the estimates are not inconsistent.
+ They would be if the time-invariant unobservables are both correlated with
+ season of birth and with deficit accumulation.
+ The estimated equations are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\ensuremath{\ln D_{\text{iw }}} & =r+\mu t_{iw}\ensuremath{+\gamma_{1}}winter_{i}\ensuremath{+\gamma_{2}}spring_{i}\ensuremath{+\gamma_{3}}summer_{i}\ensuremath{+\varepsilon_{iw}}\\
+D_{iw} & =A+Re^{\mu t_{iw}}e^{\gamma_{1}winter_{i}}e^{\gamma_{2}spring_{i}}e^{\gamma_{3}summer_{i}}+\varepsilon_{iw}
+\end{align*}
+
+\end_inset
+
+for the linear and non-linear estimates.
+\end_layout
+
+\begin_layout Standard
+In the log-linear regressions they find that the season of birth determines
+ that individuals accumulate 0.67% more deficits in winter, 0.76% more in
+ spring, and 1.4% more deficits each year in summer compared to if they were
+ born in the fall.
+ However, most estimates aren't statistical significant at 5%.
+ It makes sense that the effects are rather small, because it would be weird
+ if humans had not evolved to tolerate seasons.
+ However, it also makes sense that they aren't zero, because pregnant women
+ might be consuming more nutritious food at different seasons.
+ In the non-linear estimation results, however, they find a large effect
+ for men born in the summer of 
+\begin_inset Formula $\gamma=0.07\Rightarrow e^{\gamma}=1.07251$
+\end_inset
+
+, which is the highest deficit factor for all of the regressions.
+ This means that in the worst-case scenario, an individual will only accumulate
+ 7% more deficits over the life-cycle.
+\end_layout
+
+\begin_layout Standard
+They run a lot of regressions, but they don't control for multiple hypothesis
+ testing.
+ For each gender they run four different types of regressions, with 3 variables
+ of interest for a total of 24 hypotheses.
+ They further redo the analysis for the subsample of Mediterranean and Nordic
+ countries, plus they run non-linear least squares.
+ This extensive estimation machinery results in 
+\begin_inset Formula $78$
+\end_inset
+
+ hypotheses for the effect of seasons on the aging process.
+ There is therefore a somewhat high probability that the effects are spurious.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskyHealthAgingRetirement2020"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskyHealthAgingRetirement2020"
+literal "false"
+
+\end_inset
+
+ estimates the correlation between occupation and biological aging.
+ While it is generally known that blue-collar workers die earlier than white-col
+lar workers 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "caseBrokenWorkSex2005"
+literal "false"
+
+\end_inset
+
+, the relationship with biological aging hasn't been investigated empirically.
  
 \end_layout
 
 \begin_layout Standard
-In table 
+They estimate the following equations
+\begin_inset Formula 
+\begin{align*}
+\ln D_{iw} & =\mu t_{iw}+\gamma\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}\\
+\ln D_{iw} & =\mu t_{iw}+\omega\cdot t_{iw}\cdot\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}
+\end{align*}
+
+\end_inset
+
+where the retirement-dummy shifts the deficit curve in the first equation,
+ and increase the force of aging in the second equation.
+ They estimate it by fixed effects, so that time-invariant unobservables
+ don't affect retirement-decisions.
+ The retirement dummy shows how much 
+\end_layout
+
+\begin_layout Standard
+They further use instrumental variables, to control for the endogeneity
+ of the retirement decision.
+ While it is plausible that retirement affects the deficit accumulation,
+ it is also reasonable to assume that retirement decisions are affected
+ by the health of the workers (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DAG_retirement"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for a potential causal graph).
+\end_layout
+
+\begin_layout Standard
+In the IV regressions they use statutory ages of retirement as instruments,
+ as retirement status might be endogenous.
+ If for example a worker is subject to a workplace injury, she will get
+ a sudden increase in the deficit at the period of injury, but she might
+ also retire early because of the injury, if it is disabling.
+ In this case, the 
+\begin_inset Formula $\omega$
+\end_inset
+
+-estimate would be biased upwards.
+ Using statutory ages as instrument can help, because they have been shown
+ to work as reference points for retirement decisions 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "seiboldReferencePointsRetirement2021"
+literal "false"
+
+\end_inset
+
+ (first stage), and they are set by the government, so they are exogenous
+ for the individual.
+ This identification strategy relies on the assumption that statutory ages
+ aren't related to deficit acummulation (exclusion restriction).
+ Statutory ages are only exogenous to an extent, because workers ultimately
+ vote for members of the government, that decides the statutory ages.
+ By the Median Voter Theorem the statutory ages are set according to the
+ preferences of the median voter.
+ The median is the average in a symmetrical distribution of health deficits,
+ which would, by the Median Voter Theorem, invalidate the identification
+ strategy.
+ However, health deficits follow a Gamma-distribution 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mitnitskiAccumulationDeficitsProxy2001"
+literal "false"
+
+\end_inset
+
+, so the median is not the mean.
+ Nonetheless, this exclusion restriction has the potential to be violated.
+ Going deeper into the exclusion restriction, if the sample size increases,
+ then the sample has a larger effect on the statutory ages (by number of
+ votes).
+ Because the sample consists of 28,664 individuals, then if the external
+ validity is low, if, say, the sample is different from the population,
+ then the exclusion restriction is less likely to be violated.
+ In other words, I will argue that there is a fundamental internal-external
+ validity trade-off in this setting.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% This code uses the tikz package
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v0) at (5,0) {Deficit accumulation};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v1) at (0,0) {Retirement decision};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v2) at (2.5,2.5) {Income potential};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (v3) at (-2,2) {Statutory Ages};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (v1) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (v2) edge (v1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (v0) edge (v2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw [->] (v3) edge (v1); 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DAG_retirement"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Directed Acyclic Graph (DAG) of the model.
+\begin_inset Newline newline
+\end_inset
+
+Made with Tikz.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+They find in the FE-IV that for men, retirement decisions decrease deficits
+ by 
+\begin_inset Formula $67.8\%$
+\end_inset
+
+ for the highly educated, and 
+\begin_inset Formula $106.8\%$
+\end_inset
+
+ for the lower educated.
+ For the interaction of retirement with 
+\begin_inset Formula $t$
+\end_inset
+
+ they find, in the FE-IV regressions that for men, retirement decisions
+ changes the force of aging so the yearly accumulation of deficits is decreasing
+ by 
+\begin_inset Formula $1.1\%$
+\end_inset
+
+ for white collar workers, and 
+\begin_inset Formula $1.8\%$
+\end_inset
+
+ for the lower educated.
+ Combining this with the estimates of the parameters of the model, and assuming
+ that an individual dies at 
+\begin_inset Formula $D\left(T\right)=0.7$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+, then it predicts that in the second equation blue-collar workers can expect
+ to die 8-9 years before white collar workers
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Click here"
+target "https://www.desmos.com/calculator/ern3ylwovm"
+literal "false"
+
+\end_inset
+
+ for a Desmos graph of the calculations and the deficit factors in the second
+ equation.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset citation
+LatexCommand citetitle
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
+
+\end_inset
+
+ estimates the correlation between social vulnerability and aging with causality
+ from social vulnerability to biological age.
+ Studies have shown a connection between social vulnerability and health,
+ but in this paper they examine whether there is also a connection to the
+ aging process.
+\end_layout
+
+\begin_layout Standard
+They start by creating a Social Vulnerability Index (SVI), from the Health
+ and Retirement Study, in the same manner as the Health Deficit Index.
+ However, the SVI also includes Likert Scale questions (1 Strongly disagree;
+ 2 Disagree; ...
+ ; 5 Strongly agree), so they recode this as not a binary question, but
+ as a scale from 0 to 1.
+ While a binary question of 
+\begin_inset Quotes xld
+\end_inset
+
+Have you had/do you have cancer?
+\begin_inset Quotes xrd
+\end_inset
+
+ is easy for the individual to determine whether that answer should have
+ a score of 1 (yes) or 0 (no), the same is not true of Likert Scale questions
+ like 
+\begin_inset Quotes xld
+\end_inset
+
+How much do they [your friends] get on your nerves?
+\begin_inset Quotes xrd
+\end_inset
+
+: (not at all=0, a little=0.33, some=0.66, a lot=1)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See Table A.2 at the online appendix at this link: 
+\begin_inset CommandInset href
+LatexCommand href
+name "LINK"
+target "https://www.sciencedirect.com/science/article/pii/S2352827321001993?via%3Dihub#mmc1"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+They estimate the following equation
+\begin_inset Formula 
+\[
+\begin{aligned}SVI_{iw}= & \beta_{0}+\beta_{1}\cdot t_{iw}+\beta_{3}\cdot t_{iw}^{2}+\beta_{4}\ln\left(Income_{iw}\right)+\sum_{t=1,t\neq b}^{T}\beta_{5,t}\cdot yob_{it}+\sum_{r=1,r\neq b}^{R}\beta_{6,r}\cdot region_{iwr}+\epsilon_{iw}\end{aligned}
+,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $yob$
+\end_inset
+
+ is year-of-birth dummy, so that 
+\begin_inset Formula $\beta_{5,t}$
+\end_inset
+
+ is year-of-birth fixed effects, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the end year of birth in the sample, 
+\begin_inset Formula $R$
+\end_inset
+
+ is the number of regions, and 
+\begin_inset Formula $region$
+\end_inset
+
+ is dummy the region individual 
+\begin_inset Formula $i$
+\end_inset
+
+ was in at the time of the survey-interview.
+ They estimate this equation by fixed effects and random (Mundlak) effects.As
+ the variable of interest is 
+\begin_inset Formula $t$
+\end_inset
+
+, it might be overkill to use fixed effects to estimate the correlation
+ between 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $SVI$
+\end_inset
+
+, as the time-invariant error is (almost by definition) uncorrelated with
+ the time-varying variable, 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ However, controlling for 
+\begin_inset Formula $region$
+\end_inset
+
+ or 
+\begin_inset Formula $income$
+\end_inset
+
+ can lead to biasing paths in the Mundlak regressions, as they are probably
+ colliders of age and the latent time-invariant variable: 
+\begin_inset Formula $personality$
+\end_inset
+
+.
+ Assume there are two regions 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ In region 
+\begin_inset Formula $A$
+\end_inset
+
+ there are few people to socialize with, while in region 
+\begin_inset Formula $B$
+\end_inset
+
+ there are many: The 
+\begin_inset Formula $region$
+\end_inset
+
+ FE's are affecting the 
+\begin_inset Formula $SVI$
+\end_inset
+
+.
+ If people in old age prefer to move to less-crowded regions, then there
+ is a causal link from 
+\begin_inset Formula $t$
+\end_inset
+
+ to 
+\begin_inset Formula $region$
+\end_inset
+
+.
+ Because people are born with different time-invariant personalities (innate
+ preference for socialization), then there is also a causal link from 
+\begin_inset Formula $personality$
+\end_inset
+
+ to 
+\begin_inset Formula $region$
+\end_inset
+
+ to.
+ If, further, personality is affecting the 
+\begin_inset Formula $SVI$
+\end_inset
+
+, which is reasonable to assume, especially considering that it is created
+ from a Likert Scale, then 
+\begin_inset Formula $region$
+\end_inset
+
+ is a collider, which, by controlling region, opens up a biasing path 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cinelliCrashCourseGood2020,pearlCausalInferenceStatistics2009"
+literal "false"
+
+\end_inset
+
+ (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DAG_SVI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for a causal graph of the model).
+ Unfortunately they include region FE in all the Mundlak regressions, which,
+ I will argue, are unidentified.
+ Using individual fixed effects will control for 
+\begin_inset Formula $personality$
+\end_inset
+
+, and identify the link between 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $SVI$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Even though there are this potential for confoundness, the fixed effects
+ estimates and the Mundlak estimates are close identical to the fifth decimal
+ place.
+ They find that the 
+\begin_inset Formula $SVI$
+\end_inset
+
+ is decreasing until age 
+\begin_inset Formula $60$
+\end_inset
+
+ and increasing steadily after.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% This code uses the tikz package 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v0) at (5,0) {SVI};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v1) at (0,0) {Age};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v2) at (5,3) {Personality};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v3) at (0,3) {Birth year};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v4) at (2.5,1.5) {Region};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v5) at (2.5,-1.5) {Income};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v1) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v3) edge (v1);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v2) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v3) edge (v2);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v1) edge (v4);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v4) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v2) edge (v4);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v2) edge (v5);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v5) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v1) edge (v5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DAG_SVI"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Directed Acyclic Graph (DAG) of the model.
+ Made with Tikz.
+ 
+\begin_inset Formula $region$
+\end_inset
+
+ and 
+\begin_inset Formula $income$
+\end_inset
+
+ are colliders.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the next step they estimate the relationship between the Social Vulnerability
+ Index and the Health Deficit Index.
+ They estimate the following equation:
+\begin_inset Formula 
+\[
+\ln D_{iw}=\gamma_{0}+\gamma_{1}t_{iw}+\gamma_{3}SVI_{iw}+\gamma_{4}\ln Income_{iw}+\sum_{t=1,t\neq b}^{T}\gamma_{t,y}\cdot yob_{it}+\sum_{r=1,r=b}^{R}\gamma_{6,r}\cdot region_{iwr}+\upsilon_{iw}
+\]
+
+\end_inset
+
+by fixed effects and Mundlak-regressions.
+ 
+\end_layout
+
+\begin_layout Standard
+The effect of the Social Vulnerability Index on the Health Deficit Index
+ is probably not causal, and subject to reverse causality if for example
+ disabled individuals are socially vulnerably due to their disability.
+ Under reverse causality, even 
+\begin_inset Formula $t$
+\end_inset
+
+ is not identified, as 
+\begin_inset Formula $SVI$
+\end_inset
+
+ would become a collider.
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:All_estimates"
@@ -1196,7 +2856,7 @@ noprefix "false"
 \end_inset
 
  shows the estimates of the Gompertz- and the Makeham parameter, and the
- force of aging from linear and non-linear regressions.
+ force of aging from linear and non-linear regressions in the papers.
 \end_layout
 
 \begin_layout Standard
@@ -1204,7 +2864,7 @@ noprefix "false"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2131,1631 +3791,6 @@ YO! Estimaterne er group-specific
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
- estimates equation 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Gompertz_empirical"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:Makeham-Gompertz_empirical"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- for men and women, and across European countries.
- Contrary to previous research on health deficits with the SHARE dataset,
- 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHowWeFall2017"
-literal "false"
-
-\end_inset
-
- use that SHARE is a panel-dataset to estimate individual fixed effects
- and random effect regressions.
- These panel-data methods allow them to show whether the biology laws hold
- at the individual level.
- This contribution is important for theoretical work that builds uses the
- health deficit model and uses a representative agent, because it might
- be that the Gompertz law only hold in the aggregate.
- They find that non-linear estimates are much higher than the linear estimates,
- which indicates that the Makeham-term, 
-\begin_inset Formula $M$
-\end_inset
-
-, is important, and that the compensating law of mortality also holds for
- deficit accumulation across gender and European countries.
-\end_layout
-
-\begin_layout Standard
-The estimation procedure uses OLS, fixed effects, random effects and Mundlak-reg
-ressions.
- The linear estimates of the force of aging, 
-\begin_inset Formula $\mu$
-\end_inset
-
-, doesn't change much across the linear estimates, but they are negatively
- correlated with the Gompertz term.
- This imply that there exist an age where two groups have the same value
- of deficits, just like with mortality.
- The same is true for the non-linear estimates, but for these non-linear
- estimates the force of aging are much higher than in the linear estimates.
- From these non-linear estimates, they calculate the age of intersection
- of deficit accumulation for women and men, and for different countries.
- They find that the estimates coincide with those from the empirical litterature
- on mortality.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Linear estimates
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Non-linear estimates
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Paremeter
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Female
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Male
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Female
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Male
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\mu$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.029
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.026
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.052
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.073
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $G$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.02012
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.01584
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.003
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.0003
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $M$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.075
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.076
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The estimates above imply allowing for the Makeham-term increases the rate
- of aging by a large fraction: By almost 5 percentage point for men and
- 3 percentage point for women.
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskyHungryChildrenAge2018"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHungryChildrenAge2018"
-literal "false"
-
-\end_inset
-
- estimates the correlation between hunger episodes at early childhood with
- deficit accumulation.
- They estimate the following equations from the SHARE dataset:
-\begin_inset Formula 
-\begin{align*}
-\ln D_{\text{igw }} & =r_{g}+\mu_{g}t_{igw}+\gamma_{g}\text{hunger}_{ig}+\varepsilon_{igw}\\
-D_{ig} & =A_{g}+R_{g}\cdot e^{\mu_{g}t_{iw}}\cdot e^{\gamma_{g}\text{hunger}_{i}}+\varepsilon_{igw}
-\end{align*}
-
-\end_inset
-
-with 
-\begin_inset Formula $\text{hunger}$
-\end_inset
-
- being a dummy.
- The former equation is estimated by OLS, random effects and Mundlak, and
- the latter equation by non-linear least squares.
-\end_layout
-
-\begin_layout Standard
-They use OLS, random effects and Mundlak regressions.
- They do not use fixed effects, because hunger episodes are constant across
- time per individual.
- They cluster the SE at country and year-of-birth level.
- Clustering at country-level and year-of-birth-level makes sense according
- to the 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abadieWhenShouldYou2022"
-literal "false"
-
-\end_inset
-
- framework for clustering, as the SHARE-dataset is sampled firstly at country
- level, then at year-of-birth-level inside these clusters of countries.
- They further use non-linear regressions to relax the assumption that the
- Makeham-term, 
-\begin_inset Formula $M$
-\end_inset
-
-, is 
-\begin_inset Formula $0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The paper improves upon the litterature by showing how early life health
- shocks, in the form of hunger episodes, are correlated with biological
- aging, proxied by the health deficit index.
-\end_layout
-
-\begin_layout Standard
-While the parameters of the Health Deficit Model, 
-\begin_inset Formula $\mu$
-\end_inset
-
-, 
-\begin_inset Formula $M$
-\end_inset
-
- and 
-\begin_inset Formula $G$
-\end_inset
-
-, are close to those found in other settings, the regression coefficient
- of hunger, 
-\begin_inset Formula $\gamma$
-\end_inset
-
-, is between 0.218 and 0.547 depending on gender, estimated equation and estimatio
-n strategy.
- The deficit factor, 
-\begin_inset Formula $\frac{D(\text{ hunger })}{D(\text{non-hunger})}$
-\end_inset
-
-, from the non-linear estimates, starts at 1 at 
-\begin_inset Formula $t=0$
-\end_inset
-
- and converge towards 
-\begin_inset Formula $e^{\gamma}=e^{0.547}=1.72806$
-\end_inset
-
- (see Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:deficit_factor_convergence"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- for the trajectory for the non-linear estimates).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename deficit_factor_convergence.png
-	lyxscale 60
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:deficit_factor_convergence"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-The deficit factor, 
-\begin_inset Formula $\frac{D\left(\text{Hunger}\right)}{D\left(\text{Non-hunger}\right)}$
-\end_inset
-
-, from 
-\begin_inset Formula $D\left(t\right)=M+Ge^{\mu t}e^{\gamma}$
-\end_inset
-
- with 
-\begin_inset Formula $M=0.0772$
-\end_inset
-
-, 
-\begin_inset Formula $G=0.0002$
-\end_inset
-
-, 
-\begin_inset Formula $\mu=0.0810$
-\end_inset
-
- and 
-\begin_inset Formula $\gamma=0.547$
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-The deficit factor converges to 
-\begin_inset Formula $e^{0.547}=1.72806$
-\end_inset
-
-.
-\begin_inset Newline newline
-\end_inset
-
-Made in Desmos.
- For different parameter values 
-\begin_inset CommandInset href
-LatexCommand href
-name "click here"
-target "https://www.desmos.com/calculator/wvna1tvqsk"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-They can't use fixed effects, because hunger at childhood isn't time-invariant.
- There is then a risk that the time-invariant unobservables are correlated
- with the dummy for hunger.
- For example if health is genetic, it affects earnings potential.
- Then a reasonable Directed Acyclic Graph of the time-invariant unobservables
- would look like the one in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Directed-Acyclic-Graph"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- In the figure, the Back-door criteria is violated, so the effect of hunger
- on deficit accumulation is not identified 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "cinelliCrashCourseGood2020,pearlCausalInferenceStatistics2009"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% This code uses the tikz package
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture} 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v0) at (5,0) {Deficit Accumulation};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v1) at (0,0) {Hunger};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v2) at (2.5,3) {Health of parents};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v3) at (0,2) {Income of parents};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v4) at (5,2) {Health of individual}; 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-draw [->] (v1) edge (v0); 
-\backslash
-draw [->] (v2) edge (v3); 
-\backslash
-draw [->] (v3) edge (v1); 
-\backslash
-draw [->] (v2) edge (v4); 
-\backslash
-draw [->] (v4) edge (v0); 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Directed-Acyclic-Graph"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Directed Acyclic Graph (DAG) of how the lack of fixed effects are making
- the estimates inconsistent in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHungryChildrenAge2018"
-literal "false"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Made with Tikz.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskySeasonBirthHealth2020"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskySeasonBirthHealth2020"
-literal "false"
-
-\end_inset
-
- estimates how season of birth is correlated with biological aging.
- There has been many studies that link season of birth to longevity, by
- showing how it affects certain diseases and health deficits.
- In this paper 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskySeasonBirthHealth2020"
-literal "false"
-
-\end_inset
-
- estimates how season of birth affects health and longevity in the aggregate,
- i.e.
- how it affect the deficit acummulation.
-\end_layout
-
-\begin_layout Standard
-The Fetal Origins Hypothesis (FOH) states that small early life health shocks,
- can have large health consequences late in life.
- Such an early life health shock is the season of birth.
- While season of birth have been shown to affect the probability of developing
- diseases and other types of health deficits, it is unknown how season of
- birth affects the aging process itself, i.e.
- the accumulation of health deficits.
-\end_layout
-
-\begin_layout Standard
-They cannot use fixed effects to estimate the correlations, as season of
- birth is time-invariant, so they also run OLS, random effects and Mundlak
- regressions.
- Compared to in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHungryChildrenAge2018"
-literal "false"
-
-\end_inset
-
-, there is reason to believe that the estimates are not inconsistent.
- They would be if the time-invariant unobservables are both correlated with
- season of birth and with deficit accumulation.
- The estimated equations are:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-\ensuremath{\ln D_{\text{iw }}} & =r+\mu t_{iw}\ensuremath{+\gamma_{1}}winter_{i}\ensuremath{+\gamma_{2}}spring_{i}\ensuremath{+\gamma_{3}}summer_{i}\ensuremath{+\varepsilon_{iw}}\\
-D_{iw} & =A+Re^{\mu t_{iw}}e^{\gamma_{1}winter_{i}}e^{\gamma_{2}spring_{i}}e^{\gamma_{3}summer_{i}}+\varepsilon_{iw}
-\end{align*}
-
-\end_inset
-
-for the linear and non-linear estimates.
-\end_layout
-
-\begin_layout Standard
-In the log-linear regressions they find that the season of birth determines
- that individuals accumulate 0.67% more deficits in winter, 0.76% more in
- spring, and 1.4% more deficits each year in summer compared to if they were
- born in the fall.
- However, most estimates aren't statistical significant at 5%.
-\end_layout
-
-\begin_layout Standard
-It makes sense that the effects are rather small, because it would be weird
- if humans had not evolved to tolerate seasons.
- However, it also makes sense that they aren't zero, because pregnant women
- might be consuming more nutritious food at different seasons.
-\end_layout
-
-\begin_layout Standard
-In the non-linear estimation results, however, they find a large effect
- for men born in the summer of 
-\begin_inset Formula $\gamma=0.07\Rightarrow e^{\gamma}=1.07251$
-\end_inset
-
-, which is the highest deficit factor for all of the regressions.
- This means that in the worst-case scenario, an individual will only accumulate
- 7% more deficits over the life-cycle.
-\end_layout
-
-\begin_layout Standard
-They run a lot of regressions, but they don't control for multiple hypothesis
- testing.
- For each gender they run four different types of regressions, with 3 variables
- of interest for a total of 24 hypotheses.
- They further redo the analysis for the subsample of Mediterranean and Nordic
- countries, plus they run non-linear least squares.
- This extensive estimation machinery results in 
-\begin_inset Formula $78$
-\end_inset
-
- hypotheses for the effect of seasons on the aging process.
- There is therefore a somewhat high probability that the effects are spurious.
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskyHealthAgingRetirement2020"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskyHealthAgingRetirement2020"
-literal "false"
-
-\end_inset
-
- estimates the correlation between occupation and biological aging.
- While it is generally known that blue-collar workers die earlier than white-col
-lar workers
-\begin_inset CommandInset citation
-LatexCommand citep
-key "caseBrokenWorkSex2005"
-literal "false"
-
-\end_inset
-
-, the relationship with biological aging hasn't been investigated empirically.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Write about retirement and occupation also!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The estimate the following equations
-\begin_inset Formula 
-\begin{align*}
-\ln D_{iw} & =\mu t_{iw}+\gamma\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}\\
-\ln D_{iw} & =\mu t_{iw}+\omega\cdot t_{iw}\cdot\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}
-\end{align*}
-
-\end_inset
-
-where the retirement-dummy shifts the deficit curve in the first equation,
- and increase the force of aging in the second equation.
- They estimate it by fixed effects, so that time-invariant unobservables
- don't affect retirement-decisions.
-\end_layout
-
-\begin_layout Standard
-They further use instrumental variables, to control for the endogeneity
- of the retirement decision.
- While it is plausible that retirement affects the deficit accumulation,
- it is also reasonable to assume that retirement decisions are affected
- by the health of the workers (see Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:DAG_retirement"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- for a potential causal graph).
-\end_layout
-
-\begin_layout Standard
-In the IV regressions they use statutory ages of retirement as instruments,
- as retirement status might be endogenous.
- If for example a worker is subject to a workplace injury, she will get
- a sudden increase in the deficit at the period of injury, but she might
- also retire early because of the injury, if it is disabling.
- In this case, the 
-\begin_inset Formula $\omega$
-\end_inset
-
--estimate would be biased upwards.
- Using statutory ages as instrument can help, because they have been shown
- to work as reference points for retirement decisions 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "seiboldReferencePointsRetirement2021"
-literal "false"
-
-\end_inset
-
- (first stage), and they are set by the government, so they are exogenous
- for the individual.
- This identification strategy relies on the assumption that statutory ages
- aren't related to deficit acummulation (exclusion restriction).
- Statutory ages are only exogenous to an extent, because workers ultimately
- vote for members of the government, that decides the statutory ages.
- By the Median Voter Theorem the statutory ages are set according to the
- preferences of the median voter.
- The median is the average in a symmetrical distribution of health deficits,
- which would, by the Median Voter Theorem, invalidate the identification
- strategy.
- However, health deficits follow a Gamma-distribution 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "mitnitskiAccumulationDeficitsProxy2001"
-literal "false"
-
-\end_inset
-
-, so the median is not the mean.
- Nonetheless, this exclusion restriction has the potential to be violated.
- Going deeper into the exclusion restriction, if the sample size increases,
- then the sample has a larger effect on the statutory ages (by number of
- votes).
- Because the sample consists of 28,664 individuals, then if the external
- validity is low, if, say, the sample is different from the population,
- then the exclusion restriction is less likely to be violated.
- In other words, there are a fundamental internal-external validity trade-off
- in this setting.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% This code uses the tikz package
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture} 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v0) at (5,0) {Deficit accumulation};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v1) at (0,0) {Retirement decision};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v2) at (2.5,2.5) {Income potential};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node (v3) at (-2,2) {Statutory Ages};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-draw [->] (v1) edge (v0);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-draw [->] (v2) edge (v1);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-draw [->] (v0) edge (v2);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-draw [->] (v3) edge (v1); 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:DAG_retirement"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Directed Acyclic Graph (DAG) of the model.
-\begin_inset Newline newline
-\end_inset
-
-Made with Tikz.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-They find in the FE-IV that for men, retirement decisions decrease deficits
- by 
-\begin_inset Formula $7.1\%$
-\end_inset
-
- for the highly educated, and 
-\begin_inset Formula $39.2\%$
-\end_inset
-
- for the lower educated.
- For the interaction of retirement with 
-\begin_inset Formula $t$
-\end_inset
-
- they find, in the FE-IV regressions that for men, retirement decisions
- changes the force of aging so the yearly accumulation of deficits is decreasing
- by 
-\begin_inset Formula $1.1\%$
-\end_inset
-
- for white collar workers, and 
-\begin_inset Formula $1.8\%$
-\end_inset
-
- for the lower educated.
- Combining this with the estimates of the parameters of the model, and assuming
- that an individual dies at 
-\begin_inset Formula $D\left(T\right)=0.7$
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "mitnitskiAccumulationDeficitsAge2002"
-literal "false"
-
-\end_inset
-
-, then it predicts that in the second equation blue-collar workers can expect
- to die 8-9 years before white collar workers
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset href
-LatexCommand href
-name "Click here"
-target "https://www.desmos.com/calculator/ern3ylwovm"
-literal "false"
-
-\end_inset
-
- for a Desmos graph of the calculations and the deficit factors in the second
- equation.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-\begin_inset CommandInset citation
-LatexCommand citetitle
-key "abelianskySocialVulnerabilityAging2021"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "abelianskySocialVulnerabilityAging2021"
-literal "false"
-
-\end_inset
-
- estimates the correlation between social vulnerability and aging with causality
- from social vulnerability to biological age.
- Studies have shown a connection between social vulnerability and health,
- but in this paper they examine whether there is also a connection to the
- aging process.
-\end_layout
-
-\begin_layout Standard
-They start by creating a Social Vulnerability Index (SVI), from the Health
- and Retirement Study, in the same manner as the Health Deficit Index.
- However, the SVI also includes Likert Scale questions (1 Strongly disagree;
- 2 Disagree; ...
- ; 5 Strongly agree), so they recode this as not a binary question, but
- as a scale from 0 to 1.
- While a binary question of 
-\begin_inset Quotes xld
-\end_inset
-
-Have you had/do you have cancer?
-\begin_inset Quotes xrd
-\end_inset
-
- is easy for the individual to determine whether that answer should have
- a score of 1 (yes) or 0 (no), the same is not true of Likert Scale questions
- like 
-\begin_inset Quotes xld
-\end_inset
-
-How much do they [your friends] get on your nerves?
-\begin_inset Quotes xrd
-\end_inset
-
-: (not at all=0, a little=0.33, some=0.66, a lot=1)
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-See Table A.2 at the online appendix at this link: 
-\begin_inset CommandInset href
-LatexCommand href
-name "LINK"
-target "https://www.sciencedirect.com/science/article/pii/S2352827321001993?via%3Dihub#mmc1"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-They estimate the following equation
-\begin_inset Formula 
-\[
-\begin{aligned}SVI_{iw}= & \beta_{0}+\beta_{1}\cdot t_{iw}+\beta_{3}\cdot t_{iw}^{2}+\beta_{4}\ln\left(Income_{iw}\right)+\sum_{t=1,t\neq b}^{T}\beta_{5,t}\cdot yob_{it}+\sum_{r=1,r\neq b}^{R}\beta_{6,r}\cdot region_{iwr}+\epsilon_{iw}\end{aligned}
-,
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $yob$
-\end_inset
-
- is year-of-birth dummy, so that 
-\begin_inset Formula $\beta_{5,t}$
-\end_inset
-
- is year-of-birth fixed effects, 
-\begin_inset Formula $T$
-\end_inset
-
- is the end year of birth in the sample, 
-\begin_inset Formula $R$
-\end_inset
-
- is the number of regions, and 
-\begin_inset Formula $region$
-\end_inset
-
- is dummy the region individual 
-\begin_inset Formula $i$
-\end_inset
-
- was in at the time of the survey-interview.
- They estimate this equation by fixed effects and random (Mundlak) effects.As
- the variable of interest is 
-\begin_inset Formula $t$
-\end_inset
-
-, it might be overkill to use fixed effects to estimate the correlation
- between 
-\begin_inset Formula $t$
-\end_inset
-
- and 
-\begin_inset Formula $SVI$
-\end_inset
-
-, as the time-invariant error is (almost by definition) uncorrelated with
- the time-varying variable, 
-\begin_inset Formula $t$
-\end_inset
-
-.
- However, controlling for 
-\begin_inset Formula $region$
-\end_inset
-
- or 
-\begin_inset Formula $income$
-\end_inset
-
- can lead to biasing paths in the Mundlak regressions, as they are probably
- colliders of age and the latent time-invariant variable: 
-\begin_inset Formula $personality$
-\end_inset
-
-.
- Assume there are two regions 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $B$
-\end_inset
-
-.
- In region 
-\begin_inset Formula $A$
-\end_inset
-
- there are few people to socialize with, while in region 
-\begin_inset Formula $B$
-\end_inset
-
- there are many: The 
-\begin_inset Formula $region$
-\end_inset
-
- FE's are affecting the 
-\begin_inset Formula $SVI$
-\end_inset
-
-.
- If people in old age prefer to move to less-crowded regions, then there
- is a causal link from 
-\begin_inset Formula $t$
-\end_inset
-
- to 
-\begin_inset Formula $region$
-\end_inset
-
-.
- Because people are born with different time-invariant personalities (innate
- preference for socialization), then there is also a causal link from 
-\begin_inset Formula $personality$
-\end_inset
-
- to 
-\begin_inset Formula $region$
-\end_inset
-
- to.
- If, further, personality is affecting the 
-\begin_inset Formula $SVI$
-\end_inset
-
-, which is reasonable to assume, especially considering that it is created
- from a Likert Scale, then 
-\begin_inset Formula $region$
-\end_inset
-
- is a collider, which, by controlling region, opens up a biasing path 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "cinelliCrashCourseGood2020,pearlCausalInferenceStatistics2009"
-literal "false"
-
-\end_inset
-
- (see Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:DAG_SVI"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- for a causal graph of the model).
- Unfortunately they include region FE in all the Mundlak regressions, which,
- I will argue, are unidentified.
- Using individual fixed effects will control for 
-\begin_inset Formula $personality$
-\end_inset
-
-, and identify the link between 
-\begin_inset Formula $t$
-\end_inset
-
- and 
-\begin_inset Formula $SVI$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Even though there are this potential for confoundness, the fixed effects
- estimates and the Mundlak estimates are close identical to the fifth decimal
- place.
- They find that the 
-\begin_inset Formula $SVI$
-\end_inset
-
- is decreasing until age 
-\begin_inset Formula $60$
-\end_inset
-
- and increasing steadily after.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% This code uses the tikz package 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture} 
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-node (v0) at (5,0) {SVI};
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-node (v1) at (0,0) {Age};
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-node (v2) at (5,3) {Personality};
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-node (v3) at (0,3) {Birth year};
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-node (v4) at (2.5,1.5) {Region};
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-node (v5) at (2.5,-1.5) {Income};
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v1) edge (v0);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v3) edge (v1);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v2) edge (v0);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v3) edge (v2);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v1) edge (v4);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v4) edge (v0);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v2) edge (v4);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v2) edge (v5);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v5) edge (v0);
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-draw [->] (v1) edge (v5);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:DAG_SVI"
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Directed Acyclic Graph (DAG) of the model.
- Made with Tikz.
- 
-\begin_inset Formula $region$
-\end_inset
-
- and 
-\begin_inset Formula $income$
-\end_inset
-
- are colliders.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the next step they estimate the relationship between the Social Vulnerability
- Index and the Health Deficit Index.
- They estimate the following equation:
-\begin_inset Formula 
-\[
-\ln D_{iw}=\gamma_{0}+\gamma_{1}t_{iw}+\gamma_{3}SVI_{iw}+\gamma_{4}\ln Income_{iw}+\sum_{t=1,t\neq b}^{T}\gamma_{t,y}\cdot yob_{it}+\sum_{r=1,r=b}^{R}\gamma_{6,r}\cdot region_{iwr}+\upsilon_{iw}
-\]
-
-\end_inset
-
-by fixed effects and Mundlak-regressions.
- 
-\end_layout
-
-\begin_layout Standard
-The effect of the Social Vulnerability Index on the Health Deficit Index
- is probably not causal, and subject to reverse causality if for example
- disabled individuals are socially vulnerably due to their disability.
- Under reverse causality, even 
-\begin_inset Formula $t$
-\end_inset
-
- is not identified, as 
-\begin_inset Formula $SVI$
-\end_inset
-
- would become a collider.
-\end_layout
-
-\begin_layout Section
-Conclusion
 \end_layout
 
 \begin_layout Standard
