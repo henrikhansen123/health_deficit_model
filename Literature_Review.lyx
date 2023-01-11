@@ -106,7 +106,6 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author 31028646 "henrik"
 \end_header
 
 \begin_body
@@ -523,35 +522,6 @@ The Health Deficit Model is life-cycle models that use
 \end_inset
 
 for the evolution of health over the life-cycle.
- 
-\change_deleted 31028646 1673358633
-Two important values need to be made about the HDM: Firstly, the value of
- the initial deficits 
-\begin_inset Formula $D\left(0\right)$
-\end_inset
-
-, and secondly, the terminal condition 
-\begin_inset Formula $D\left(T\right)=\overline{D}$
-\end_inset
-
-, at which death occurs.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Estimates from mitnitski have shown that this terminal condition is at 
-\begin_inset Formula $0.7$
-\end_inset
-
- by using the frailty index as deficit accumulations
-\end_layout
-
-\end_inset
-
-.
-\change_unchanged
-
 \end_layout
 
 \begin_layout Standard
@@ -3308,6 +3278,17 @@ literal "false"
 \end_inset
 
 , the relationship with biological aging hasn't been investigated empirically.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Write about retirement and occupation also!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3519,16 +3500,60 @@ Made with Tikz.
 \end_layout
 
 \begin_layout Standard
-They find in their estimates that
-\end_layout
+They find in the FE-IV that for men, retirement decisions decrease deficits
+ by 
+\begin_inset Formula $7.1\%$
+\end_inset
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
+ for the highly educated, and 
+\begin_inset Formula $39.2\%$
+\end_inset
+
+ for the lower educated.
+ For the interaction of retirement with 
+\begin_inset Formula $t$
+\end_inset
+
+ they find, in the FE-IV regressions that for men, retirement decisions
+ changes the force of aging so the yearly accumulation of deficits is decreasing
+ by 
+\begin_inset Formula $1.1\%$
+\end_inset
+
+ for white collar workers, and 
+\begin_inset Formula $1.8\%$
+\end_inset
+
+ for the lower educated.
+ Combining this with the estimates of the parameters of the model, and assuming
+ that an individual dies at 
+\begin_inset Formula $D\left(T\right)=0.7$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mitnitskiAccumulationDeficitsAge2002"
+literal "false"
+
+\end_inset
+
+, then it predicts that in the second equation blue-collar workers can expect
+ to die 8-9 years before white collar workers
+\begin_inset Foot
+status collapsed
 
 \begin_layout Plain Layout
-7) Do you see any problems with the reasoning? What are the limitations
- of the data and methods? How could one improve upon this study?
+\begin_inset CommandInset href
+LatexCommand href
+name "Click here"
+target "https://www.desmos.com/calculator/ern3ylwovm"
+literal "false"
+
+\end_inset
+
+ for a Desmos graph of the calculations and the deficit factors in the second
+ equation.
 \end_layout
 
 \end_inset
@@ -3548,32 +3573,55 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-1) What is the main question examined and why is it important?
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "abelianskySocialVulnerabilityAging2021"
+literal "false"
 
 \end_inset
 
-
+ estimates the correlation between social vulnerability and aging with causality
+ from social vulnerability to biological age.
+ Studies have shown a connection between social vulnerability and health,
+ but in this paper they examine whether there is also a connection to the
+ aging process.
 \end_layout
 
 \begin_layout Standard
-This paper answers the question of how social vulnerability affects biological
- aging.
- This research question is important, because there is a belief that there
- is a loneliness epidemic
+They start by creating a Social Vulnerability Index (SVI), from the Health
+ and Retirement Study, in the same manner as the Health Deficit Index.
+ However, the SVI also includes Likert Scale questions (1 Strongly disagree;
+ 2 Disagree; ...
+ ; 5 Strongly agree), so they recode this as not a binary question, but
+ as a scale from 0 to 1.
+ While a binary question of 
+\begin_inset Quotes xld
+\end_inset
+
+Have you had/do you have cancer?
+\begin_inset Quotes xrd
+\end_inset
+
+ is easy for the individual to determine whether that answer should have
+ a score of 1 (yes) or 0 (no), the same is not true of Likert Scale questions
+ like 
+\begin_inset Quotes xld
+\end_inset
+
+How much do they [your friends] get on your nerves?
+\begin_inset Quotes xrd
+\end_inset
+
+: (not at all=0, a little=0.33, some=0.66, a lot=1)
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-See for example the descriptive statistics of the decrease in civic partipation
- in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "putnamBowlingAloneCollapse2001"
+See Table A.2 at the online appendix at this link: 
+\begin_inset CommandInset href
+LatexCommand href
+name "LINK"
+target "https://www.sciencedirect.com/science/article/pii/S2352827321001993?via%3Dihub#mmc1"
 literal "false"
 
 \end_inset
@@ -3584,6 +3632,393 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+They estimate the following equation
+\begin_inset Formula 
+\[
+\begin{aligned}SVI_{iw}= & \beta_{0}+\beta_{1}\cdot t_{iw}+\beta_{3}\cdot t_{iw}^{2}+\beta_{4}\ln\left(Income_{iw}\right)+\sum_{t=1,t\neq b}^{T}\beta_{5,t}\cdot yob_{it}+\sum_{r=1,r\neq b}^{R}\beta_{6,r}\cdot region_{iwr}+\epsilon_{iw}\end{aligned}
+,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $yob$
+\end_inset
+
+ is year-of-birth dummy, so that 
+\begin_inset Formula $\beta_{5,t}$
+\end_inset
+
+ is year-of-birth fixed effects, 
+\begin_inset Formula $T$
+\end_inset
+
+ is the end year of birth in the sample, 
+\begin_inset Formula $R$
+\end_inset
+
+ is the number of regions, and 
+\begin_inset Formula $region$
+\end_inset
+
+ is dummy the region individual 
+\begin_inset Formula $i$
+\end_inset
+
+ was in at the time of the survey-interview.
+ They estimate this equation by fixed effects and random (Mundlak) effects.As
+ the variable of interest is 
+\begin_inset Formula $t$
+\end_inset
+
+, it might be overkill to use fixed effects to estimate the correlation
+ between 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $SVI$
+\end_inset
+
+, as the time-invariant error is (almost by definition) uncorrelated with
+ the time-varying variable, 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ However, controlling for 
+\begin_inset Formula $region$
+\end_inset
+
+ or 
+\begin_inset Formula $income$
+\end_inset
+
+ can lead to biasing paths in the Mundlak regressions, as they are probably
+ colliders of age and the latent time-invariant variable: 
+\begin_inset Formula $personality$
+\end_inset
+
+.
+ Assume there are two regions 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ In region 
+\begin_inset Formula $A$
+\end_inset
+
+ there are few people to socialize with, while in region 
+\begin_inset Formula $B$
+\end_inset
+
+ there are many: The 
+\begin_inset Formula $region$
+\end_inset
+
+ FE's are affecting the 
+\begin_inset Formula $SVI$
+\end_inset
+
+.
+ If people in old age prefer to move to less-crowded regions, then there
+ is a causal link from 
+\begin_inset Formula $t$
+\end_inset
+
+ to 
+\begin_inset Formula $region$
+\end_inset
+
+.
+ Because people are born with different time-invariant personalities (innate
+ preference for socialization), then there is also a causal link from 
+\begin_inset Formula $personality$
+\end_inset
+
+ to 
+\begin_inset Formula $region$
+\end_inset
+
+ to.
+ If, further, personality is affecting the 
+\begin_inset Formula $SVI$
+\end_inset
+
+, which is reasonable to assume, especially considering that it is created
+ from a Likert Scale, then 
+\begin_inset Formula $region$
+\end_inset
+
+ is a collider, which, by controlling region, opens up a biasing path 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cinelliCrashCourseGood2020,pearlCausalInferenceStatistics2009"
+literal "false"
+
+\end_inset
+
+ (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DAG_SVI"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for a causal graph of the model).
+ Unfortunately they include region FE in all the Mundlak regressions, which,
+ I will argue, are unidentified.
+ Using individual fixed effects will control for 
+\begin_inset Formula $personality$
+\end_inset
+
+, and identify the link between 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $SVI$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Even though there are this potential for confoundness, the fixed effects
+ estimates and the Mundlak estimates are close identical to the fifth decimal
+ place.
+ They find that the 
+\begin_inset Formula $SVI$
+\end_inset
+
+ is decreasing until age 
+\begin_inset Formula $60$
+\end_inset
+
+ and increasing steadily after.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% This code uses the tikz package 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture} 
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v0) at (5,0) {SVI};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v1) at (0,0) {Age};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v2) at (5,3) {Personality};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v3) at (0,3) {Birth year};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v4) at (2.5,1.5) {Region};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node (v5) at (2.5,-1.5) {Income};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v1) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v3) edge (v1);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v2) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v3) edge (v2);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v1) edge (v4);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v4) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v2) edge (v4);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v2) edge (v5);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v5) edge (v0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+draw [->] (v1) edge (v5);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DAG_SVI"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Directed Acyclic Graph (DAG) of the model.
+ Made with Tikz.
+ 
+\begin_inset Formula $region$
+\end_inset
+
+ and 
+\begin_inset Formula $income$
+\end_inset
+
+ are colliders.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the next step they estimate the relationship between the Social Vulnerability
+ Index and the Health Deficit Index.
+ They estimate the following equation:
+\begin_inset Formula 
+\[
+\ln D_{iw}=\gamma_{0}+\gamma_{1}t_{iw}+\gamma_{3}SVI_{iw}+\gamma_{4}\ln Income_{iw}+\sum_{t=1,t\neq b}^{T}\gamma_{t,y}\cdot yob_{it}+\sum_{r=1,r=b}^{R}\gamma_{6,r}\cdot region_{iwr}+\upsilon_{iw}
+\]
+
+\end_inset
+
+by fixed effects and Mundlak-regressions.
+ 
+\end_layout
+
+\begin_layout Standard
+The effect of the Social Vulnerability Index on the Health Deficit Index
+ is probably not causal, and subject to reverse causality if for example
+ disabled individuals are socially vulnerably due to their disability.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
@@ -3651,24 +4086,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-They, outside of creating a health deficit index, create a social vulnerability
- index in a somewhat similar manner.
- The difference is that while the health deficit index is created by yes/no
- questions, the social vulnerability index is created as a scale.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Read Nabanita's paper on self-reported health
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -3711,12 +4128,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-The effect of SVI on FI is not causal, and probably subject to reverse causality
- if for example disabled individuals are socially vulnerably due to their
- disability.
 \end_layout
 
 \begin_layout Section
