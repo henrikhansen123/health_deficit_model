@@ -123,125 +123,6 @@ The Health Deficit Model - A Literature Review
 Henrik Hansen
 \end_layout
 
-\begin_layout Standard
-\begin_inset Branch Outline
-inverted 0
-status collapsed
-
-\begin_layout Enumerate
-Introduction
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Hook:????
-\end_layout
-
-\begin_layout Enumerate
-Criticism of the Grossman model
-\end_layout
-
-\begin_layout Enumerate
-Motivating a new model
-\end_layout
-
-\begin_layout Enumerate
-Use of notation
-\end_layout
-
-\begin_layout Enumerate
-Outline of review
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Background
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Frailty index
-\end_layout
-
-\begin_layout Enumerate
-Reliability theory
-\end_layout
-
-\begin_layout Enumerate
-Health deficit model
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-How it is built
-\end_layout
-
-\begin_layout Enumerate
-Micro foundations of the model
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Enumerate
-Empirical applications
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-The SHARE-dataset
-\end_layout
-
-\begin_layout Enumerate
-Gompertz equations and Makeham-Gompertz equations
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Theoretical applications
-\end_layout
-
-\begin_layout Enumerate
-Conclusion
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Branch To do
-inverted 0
-status open
-
-\begin_layout Itemize
-\begin_inset Formula $t$
-\end_inset
-
- should be 
-\begin_inset Formula $age$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Write that 
-\begin_inset Formula $w$
-\end_inset
-
- is time.
-\end_layout
-
-\begin_layout Itemize
-The estimates in health and retirement ages don't make sense.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Aging as deficit accumulation
 \end_layout
@@ -315,7 +196,7 @@ literal "false"
 
 \end_inset
 
- model (Health Capital Model; HCM), health is a capital stock that depreciates
+ model (Health Capital Model), health is a capital stock that depreciates
  following the law of motion of health capital
 \begin_inset Formula 
 \begin{equation}
@@ -438,7 +319,7 @@ noprefix "false"
 \begin_inset Formula $D\left(.\right)$
 \end_inset
 
-, are all the health related diseases, signs, symptions, etc., 
+, are all the health related diseases, signs, symptoms, etc., 
 \begin_inset Formula $E$
 \end_inset
 
@@ -747,8 +628,8 @@ In reliability theory, a system is aging if the probability that it dies
  A system whose mortality rate does not increase is not aging.
  A non-aging system is not immortal though, but it can only die by random
  chance.
- Importantly, reliability theory assumes that all the systems' components
- are non-aging so that aging is an emergent property.
+ Importantly, reliability theory assumes that all systems' components are
+ non-aging so that aging is an emergent property.
  The intuition is as follows: If a system is build of non-aging redundant
  components, so that aging is an emergent property, then as the the individual
  components fail, the system gets closer to a one component system, i.e.
@@ -1023,13 +904,13 @@ uted and is able to predict mortality with great precision.
 \begin_layout Standard
 The Health Deficit Index is the sum of health deficits over the sum of potential
  deficits.
- Health deficits are all types of diseases, signs, symptions, etc., and the
+ Health deficits are all types of diseases, signs, symptoms, etc., and the
  potential deficits are all the deficits the individual has answered.
  They use data from the Canadian Study of Health and Aging, where they find
- that for 2194 elderly canadians the distribution of the Health Deficit
+ that for 2194 elderly Canadians the distribution of the Health Deficit
  Index follows a Gamma-distribution, which is used in reliability theory
  for estimating the redundancies of systems.
- This provides an empirical justification for the microfoundations from
+ This provides an empirical justification for the micro-foundations from
  reliability theory.
  They further estimate equation 
 \begin_inset CommandInset ref
@@ -1042,7 +923,7 @@ noprefix "false"
 \end_inset
 
 , the Gompertz law of mortality applied to deficit accumulation, and find
- that their sample accumulates 3.3% deficts each year.
+ that their sample accumulates 3.3% deficits each year.
 \end_layout
 
 \begin_layout Standard
@@ -1094,8 +975,8 @@ Empirical economics research on the Health Deficit Model
 The following empirical papers estimate extensions of the following equations
 \begin_inset Formula 
 \begin{align}
-\ln D_{ig} & =\ln G_{ig}+\mu_{ig}\cdot t_{ig}+\epsilon_{ig}\label{eq:Gompertz_empirical}\\
-D_{ig} & =M_{g}+G_{g}\cdot e^{\mu_{g}\cdot t_{ig}}+\epsilon_{ig}\label{eq:Makeham-Gompertz_empirical}
+\ln D_{ig} & =\ln G_{ig}+\mu_{ig}\cdot age_{ig}+\epsilon_{ig}\label{eq:Gompertz_empirical}\\
+D_{ig} & =M_{g}+G_{g}\cdot e^{\mu_{g}\cdot age_{ig}}+\epsilon_{ig}\label{eq:Makeham-Gompertz_empirical}
 \end{align}
 
 \end_inset
@@ -1171,8 +1052,8 @@ noprefix "false"
 \begin_inset Formula $G$
 \end_inset
 
- and age 
-\begin_inset Formula $t$
+ and 
+\begin_inset Formula $age$
 \end_inset
 
 .
@@ -1184,7 +1065,7 @@ noprefix "false"
 \end_inset
 
  and 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
 .
@@ -1203,9 +1084,9 @@ noprefix "false"
 
 \begin_layout Standard
 In most of the studies they create a health deficit index from the Survey
- of Health, Aging and Retirement in Europe (SHARE) dataset, that includes
+ of Health, Aging and Retirement in Europe (SHARE) data set, that includes
  over 140,000 individuals over the age of 50 from 20 European countries.
- The SHARE dataset is created by repeated sampling of retirerees in Europe,
+ The SHARE data set is created by repeated sampling of retirerees in Europe,
  so it has a panel-structure.
  Every repetition of sampling, wave, is denoted by a 
 \begin_inset Formula $w$
@@ -1225,7 +1106,7 @@ literal "false"
 
 -paper.
  Basically, it measures the share of deficits to potential deficits, where
- potential deficits are the number of defictis the survey-participant responds
+ potential deficits are the number of deficits the survey-participant responds
  to.
 \end_layout
 
@@ -1273,7 +1154,7 @@ noprefix "false"
 \end_inset
 
  for men and women, and across European countries.
- Contrary to previous research on health deficits with the SHARE dataset,
+ Contrary to previous research on health deficits with the SHARE data set,
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1282,7 +1163,7 @@ literal "false"
 
 \end_inset
 
- exploit that SHARE is a panel-dataset to estimate individual fixed effects
+ exploit that SHARE is a panel-data set to estimate individual fixed effects
  and random effect regressions.
  These panel-data methods allow them to show whether the biology laws hold
  at the individual level.
@@ -1305,7 +1186,7 @@ ressions.
  estimates the force of aging are much higher than in the linear estimates.
  From these non-linear estimates, they calculate the age of intersection
  of deficit accumulation for women and men, and for different countries.
- They find that the estimates coincide with those from the empirical litterature
+ They find that the estimates coincide with those from the empirical literature
  on mortality.
 \end_layout
 
@@ -1609,8 +1490,8 @@ literal "false"
  They estimate the following equations from the SHARE dataset:
 \begin_inset Formula 
 \begin{align*}
-\ln D_{\text{igw }} & =r_{g}+\mu_{g}t_{igw}+\gamma_{g}\text{hunger}_{ig}+\varepsilon_{igw}\\
-D_{ig} & =A_{g}+R_{g}\cdot e^{\mu_{g}t_{iw}}\cdot e^{\gamma_{g}\text{hunger}_{i}}+\varepsilon_{igw}
+\ln D_{\text{igw }} & =r_{g}+\mu_{g}age_{igw}+\gamma_{g}\text{hunger}_{ig}+\varepsilon_{igw}\\
+D_{ig} & =A_{g}+R_{g}\cdot e^{\mu_{g}age_{iw}}\cdot e^{\gamma_{g}\text{hunger}_{i}}+\varepsilon_{igw}
 \end{align*}
 
 \end_inset
@@ -1638,7 +1519,7 @@ literal "false"
 
 \end_inset
 
- framework for clustering, as the SHARE-dataset is sampled first at country
+ framework for clustering, as the SHARE-data set is sampled first at country
  level, then at year-of-birth-level inside these clusters of countries.
  They further use non-linear regressions to relax the assumption that the
  Makeham-term, 
@@ -1677,7 +1558,7 @@ n strategy.
 \end_inset
 
 , from the non-linear estimates, starts at 1 at 
-\begin_inset Formula $t=0$
+\begin_inset Formula $age=0$
 \end_inset
 
  and converge towards 
@@ -1698,7 +1579,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The paper improves upon the litterature by showing how early life health
+The paper improves upon the literature by showing how early life health
  shocks, in the form of hunger episodes, are correlated with biological
  aging.
 \end_layout
@@ -1993,7 +1874,7 @@ literal "false"
 
  estimates how season of birth affects health and longevity in the aggregate,
  i.e.
- how it affects the deficit acummulation.
+ how it affects the deficit accumulation.
 \end_layout
 
 \begin_layout Standard
@@ -2027,8 +1908,8 @@ literal "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\ensuremath{\ln D_{\text{iw }}} & =r+\mu t_{iw}\ensuremath{+\gamma_{1}}winter_{i}\ensuremath{+\gamma_{2}}spring_{i}\ensuremath{+\gamma_{3}}summer_{i}\ensuremath{+\varepsilon_{iw}}\\
-D_{iw} & =A+Re^{\mu t_{iw}}e^{\gamma_{1}winter_{i}}e^{\gamma_{2}spring_{i}}e^{\gamma_{3}summer_{i}}+\varepsilon_{iw}
+\ensuremath{\ln D_{\text{iw }}} & =r+\mu age_{iw}\ensuremath{+\gamma_{1}}winter_{i}\ensuremath{+\gamma_{2}}spring_{i}\ensuremath{+\gamma_{3}}summer_{i}\ensuremath{+\varepsilon_{iw}}\\
+D_{iw} & =A+Re^{\mu age_{iw}}e^{\gamma_{1}winter_{i}}e^{\gamma_{2}spring_{i}}e^{\gamma_{3}summer_{i}}+\varepsilon_{iw}
 \end{align*}
 
 \end_inset
@@ -2061,8 +1942,8 @@ They run a lot of regressions, but they don't control for multiple hypothesis
  testing.
  For each gender they run four different types of regressions, with 3 variables
  of interest for a total of 24 hypotheses.
- They further redo the analysis for the subsample of Mediterranean and Nordic
- countries, plus they run non-linear least squares.
+ They further redo the analysis for the sub-sample of Mediterranean and
+ Nordic countries, plus they run non-linear least squares.
  This extensive estimation machinery results in 
 \begin_inset Formula $78$
 \end_inset
@@ -2101,15 +1982,11 @@ literal "false"
 \end_inset
 
 , the relationship with biological aging hasn't been investigated empirically.
- 
-\end_layout
-
-\begin_layout Standard
-They estimate the following equations
+ They estimate the following equations
 \begin_inset Formula 
 \begin{align*}
-\ln D_{iw} & =\mu t_{iw}+\gamma\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}\\
-\ln D_{iw} & =\mu t_{iw}+\omega\cdot t_{iw}\cdot\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}
+\ln D_{iw} & =\mu age_{iw}+\gamma\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}\\
+\ln D_{iw} & =\mu age_{iw}+\omega\cdot age_{iw}\cdot\text{retirement}_{iw}+\lambda_{i}+\epsilon_{iw}
 \end{align*}
 
 \end_inset
@@ -2118,7 +1995,6 @@ where the retirement-dummy shifts the deficit curve in the first equation,
  and increase the force of aging in the second equation.
  They estimate it by fixed effects, so that time-invariant unobservables
  don't affect retirement-decisions.
- The retirement dummy shows how much 
 \end_layout
 
 \begin_layout Standard
@@ -2137,10 +2013,7 @@ noprefix "false"
 \end_inset
 
  for a potential causal graph).
-\end_layout
-
-\begin_layout Standard
-In the IV regressions they use statutory ages of retirement as instruments,
+ In the IV regressions they use statutory ages of retirement as instruments,
  as retirement status might be endogenous.
  If for example a worker is subject to a workplace injury, she will get
  a sudden increase in the deficit at the period of injury, but she might
@@ -2162,7 +2035,7 @@ literal "false"
  (first stage), and they are set by the government, so they are exogenous
  for the individual.
  This identification strategy relies on the assumption that statutory ages
- aren't related to deficit acummulation (exclusion restriction).
+ aren't related to deficit accumulation (exclusion restriction).
  Statutory ages are only exogenous to an extent, because workers ultimately
  vote for members of the government, that decides the statutory ages.
  By the Median Voter Theorem the statutory ages are set according to the
@@ -2319,13 +2192,13 @@ They find in the FE-IV that for men, retirement decisions decrease deficits
 \begin_inset Formula $67.8\%$
 \end_inset
 
- for the highly educated, and 
+ for white collar workers, and 
 \begin_inset Formula $106.8\%$
 \end_inset
 
- for the lower educated.
+ for blue collar workers.
  For the interaction of retirement with 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
  they find, in the FE-IV regressions that for men, retirement decisions
@@ -2372,7 +2245,7 @@ literal "false"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2394,7 +2267,7 @@ literal "false"
 
 \end_inset
 
- estimates the correlation between social vulnerability and aging with causality
+ estimate the correlation between social vulnerability and aging with causality
  from social vulnerability to biological age.
  Studies have shown a connection between social vulnerability and health,
  but in this paper they examine whether there is also a connection to the
@@ -2406,8 +2279,7 @@ They start by creating a Social Vulnerability Index (SVI), from the Health
  and Retirement Study, in the same manner as the Health Deficit Index.
  However, the SVI also includes Likert Scale questions (1 Strongly disagree;
  2 Disagree; ...
- ; 5 Strongly agree), so they recode this as not a binary question, but
- as a scale from 0 to 1.
+ ; 5 Strongly agree), so they re-code this as a scale from 0 to 1.
  While a binary question of 
 \begin_inset Quotes xld
 \end_inset
@@ -2452,7 +2324,7 @@ literal "false"
 They estimate the following equation
 \begin_inset Formula 
 \[
-\begin{aligned}SVI_{iw}= & \beta_{0}+\beta_{1}\cdot t_{iw}+\beta_{3}\cdot t_{iw}^{2}+\beta_{4}\ln\left(Income_{iw}\right)+\sum_{t=1,t\neq b}^{T}\beta_{5,t}\cdot yob_{it}+\sum_{r=1,r\neq b}^{R}\beta_{6,r}\cdot region_{iwr}+\epsilon_{iw}\end{aligned}
+\begin{aligned}SVI_{iw}= & \beta_{0}+\beta_{1}\cdot age_{iw}+\beta_{3}\cdot age_{iw}^{2}+\beta_{4}\ln\left(Income_{iw}\right)+\sum_{t=1,t\neq b}^{T}\beta_{5,t}\cdot yob_{it}+\sum_{r=1,r\neq b}^{R}\beta_{6,r}\cdot region_{iwr}+\epsilon_{iw}\end{aligned}
 ,
 \]
 
@@ -2485,12 +2357,12 @@ where
  was in at the time of the survey-interview.
  They estimate this equation by fixed effects and random (Mundlak) effects.As
  the variable of interest is 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
 , it might be overkill to use fixed effects to estimate the correlation
  between 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
  and 
@@ -2499,7 +2371,7 @@ where
 
 , as the time-invariant error is (almost by definition) uncorrelated with
  the time-varying variable, 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
 .
@@ -2545,7 +2417,7 @@ where
 .
  If people in old age prefer to move to less-crowded regions, then there
  is a causal link from 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
  to 
@@ -2598,7 +2470,7 @@ noprefix "false"
 \end_inset
 
 , and identify the link between 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
  and 
@@ -2816,7 +2688,7 @@ In the next step they estimate the relationship between the Social Vulnerability
  They estimate the following equation:
 \begin_inset Formula 
 \[
-\ln D_{iw}=\gamma_{0}+\gamma_{1}t_{iw}+\gamma_{3}SVI_{iw}+\gamma_{4}\ln Income_{iw}+\sum_{t=1,t\neq b}^{T}\gamma_{t,y}\cdot yob_{it}+\sum_{r=1,r=b}^{R}\gamma_{6,r}\cdot region_{iwr}+\upsilon_{iw}
+\ln D_{iw}=\gamma_{0}+\gamma_{1}age_{iw}+\gamma_{3}SVI_{iw}+\gamma_{4}\ln Income_{iw}+\sum_{t=1,t\neq b}^{T}\gamma_{t,y}\cdot yob_{it}+\sum_{r=1,r=b}^{R}\gamma_{6,r}\cdot region_{iwr}+\upsilon_{iw}
 \]
 
 \end_inset
@@ -2830,14 +2702,14 @@ The effect of the Social Vulnerability Index on the Health Deficit Index
  is probably not causal, and subject to reverse causality if for example
  disabled individuals are socially vulnerably due to their disability.
  Under reverse causality, even 
-\begin_inset Formula $t$
+\begin_inset Formula $age$
 \end_inset
 
  is not identified, as 
 \begin_inset Formula $SVI$
 \end_inset
 
- would become a collider.
+ is a collider.
 \end_layout
 
 \begin_layout Section
@@ -2845,7 +2717,20 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-Table 
+I have summarized all the estimates of the parameters of the basic model
+ (
+\begin_inset Formula $\mu$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+) in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:All_estimates"
@@ -2855,22 +2740,62 @@ noprefix "false"
 
 \end_inset
 
- shows the estimates of the Gompertz- and the Makeham parameter, and the
- force of aging from linear and non-linear regressions in the papers.
+.
+ I have further plotted the deficit trajectories by gender for the estimates
+ in the table.
+ The trajectories can be seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:overall_deficits"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, where the left side graph is for females and the right side graph is for
+ males.
+ The purple lines are the trajectories for the linear estimates, and the
+ red lines for the non-linear estimates.
+ Even though there aren't non-linear estimates for 2 of the 5 papers, the
+ fact that the non-linear trajectories are so much closer to each other
+ than the linear ones, indicates that the linear model, with 
+\begin_inset Formula $M=0$
+\end_inset
+
+, is misspecified.
+\end_layout
+
+\begin_layout Standard
+Some of the papers I have reviewed have the potential to be unidentified
+ because of use of random effects instead of fixed effects, controlling
+ for colliders, or using instruments with low validity.
+ To extend the literature on the health deficit accumulation, there is a
+ need for credible identification strategies regarding deficit accumulation.
+\end_layout
+
+\begin_layout Standard
+The development of the Health Deficit Model enables researchers to answer
+ new questions of the long-run effects on health by measuring the changes
+ in the Health Deficit Index.
+ The economic literature on health deficits brings us closer to really understan
+ding the mechanics behind how health deteriorates.
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Float table
+placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="12" columns="7">
+<lyxtabular version="3" rows="12" columns="8">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2884,6 +2809,15 @@ status collapsed
 
 \begin_layout Plain Layout
 Source
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Procedure
 \end_layout
 
 \end_inset
@@ -2944,6 +2878,15 @@ Non-linear estimates
 </cell>
 </row>
 <row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3040,6 +2983,15 @@ literal "false"
 
 \end_inset
 </cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FE
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3066,7 +3018,7 @@ Male
 \uwave off
 \noun off
 \color none
-0.01584
+0.016
 \end_layout
 
 \end_inset
@@ -3097,7 +3049,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0764
+0.076
 \end_layout
 
 \end_inset
@@ -3115,13 +3067,22 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0732
+0.073
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3144,7 +3105,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.02012
+0.031
 \end_layout
 
 \end_inset
@@ -3166,7 +3127,7 @@ Female
 \uwave off
 \noun off
 \color none
-0.029
+0.023
 \end_layout
 
 \end_inset
@@ -3175,7 +3136,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0754
+0.075
 \end_layout
 
 \end_inset
@@ -3184,7 +3145,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0029
+0.003
 \end_layout
 
 \end_inset
@@ -3193,7 +3154,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0525
+0.053
 \end_layout
 
 \end_inset
@@ -3211,7 +3172,16 @@ literal "false"
 
 \end_inset
 
+*
+\end_layout
 
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mundlak
 \end_layout
 
 \end_inset
@@ -3229,7 +3199,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.01518
+0.015
 \end_layout
 
 \end_inset
@@ -3247,7 +3217,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0772
+0.077
 \end_layout
 
 \end_inset
@@ -3265,13 +3235,22 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0810
+0.081
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3294,7 +3273,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.015
+0.013
 \end_layout
 
 \end_inset
@@ -3303,7 +3282,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.034
+0.022
 \end_layout
 
 \end_inset
@@ -3312,7 +3291,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0814
+0.081
 \end_layout
 
 \end_inset
@@ -3321,7 +3300,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0021
+0.002
 \end_layout
 
 \end_inset
@@ -3330,7 +3309,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0569
+0.057
 \end_layout
 
 \end_inset
@@ -3353,6 +3332,15 @@ literal "false"
 
 \end_inset
 </cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mundlak
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3366,7 +3354,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0313
+0.121
 \end_layout
 
 \end_inset
@@ -3375,7 +3363,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.01829
+0.022
 \end_layout
 
 \end_inset
@@ -3384,7 +3372,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0764
+0.076
 \end_layout
 
 \end_inset
@@ -3402,7 +3390,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0691
+0.069
 \end_layout
 
 \end_inset
@@ -3410,6 +3398,15 @@ Male
 </row>
 <row>
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3431,7 +3428,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.05345
+0.121
 \end_layout
 
 \end_inset
@@ -3440,7 +3437,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.01631
+0.016
 \end_layout
 
 \end_inset
@@ -3449,7 +3446,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0836
+0.084
 \end_layout
 
 \end_inset
@@ -3458,7 +3455,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0021
+0.002
 \end_layout
 
 \end_inset
@@ -3467,7 +3464,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0569
+0.057
 \end_layout
 
 \end_inset
@@ -3485,7 +3482,16 @@ literal "false"
 
 \end_inset
 
-*
+**
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FE-IV
 \end_layout
 
 \end_inset
@@ -3503,7 +3509,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.02515
+0.020
 \end_layout
 
 \end_inset
@@ -3512,7 +3518,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.016
+0.039
 \end_layout
 
 \end_inset
@@ -3555,6 +3561,15 @@ Male
 
 \end_inset
 </cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3568,7 +3583,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.03854
+0.032
 \end_layout
 
 \end_inset
@@ -3577,7 +3592,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.015
+0.027
 \end_layout
 
 \end_inset
@@ -3627,6 +3642,15 @@ literal "false"
 
 \end_inset
 </cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FE
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3640,7 +3664,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
--
+0.006
 \end_layout
 
 \end_inset
@@ -3649,7 +3673,7 @@ Male
 \begin_inset Text
 
 \begin_layout Plain Layout
--
+0.049
 \end_layout
 
 \end_inset
@@ -3692,6 +3716,15 @@ Male
 
 \end_inset
 </cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -3705,7 +3738,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
--
+0.011
 \end_layout
 
 \end_inset
@@ -3714,7 +3747,7 @@ Female
 \begin_inset Text
 
 \begin_layout Plain Layout
--
+0.040
 \end_layout
 
 \end_inset
@@ -3766,11 +3799,19 @@ name "tab:All_estimates"
 \end_inset
 
 The estimates of the parameters of the Health Deficit Model using linear
- (OLS) and non-linear least squares.
+ (Mundlak or Fixed effects) and non-linear least squares.
 \begin_inset Newline newline
 \end_inset
 
-* Fixed effects regressions.
+* Sub-sample where 
+\begin_inset Formula $\text{hunger}_{0-4}=1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+** Sub-sample for blue collar workers
 \end_layout
 
 \end_inset
@@ -3781,11 +3822,142 @@ The estimates of the parameters of the Health Deficit Model using linear
 \end_inset
 
 
-\begin_inset Note Note
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-YO! Estimaterne er group-specific
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename overall_female.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename overall_male.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:overall_deficits"
+
+\end_inset
+
+ Plotting the equation 
+\begin_inset Formula $D\left(t\right)=M+Ge^{\mu t}$
+\end_inset
+
+, for the papers.
+\begin_inset Newline newline
+\end_inset
+
+Left hand figure are estimates for females, and right hand side are estimates
+ for male.
+\begin_inset Newline newline
+\end_inset
+
+The purple lines are of the linear estimates with 
+\begin_inset Formula $M=0$
+\end_inset
+
+.
+ The red lines for the non-linear estimates.
+\begin_inset Newline newline
+\end_inset
+
+Link to Desmos graph: 
+\begin_inset CommandInset href
+LatexCommand href
+name "Click here"
+target "https://www.desmos.com/calculator/6yivueldhw"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
