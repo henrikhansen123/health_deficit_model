@@ -111,6 +111,7 @@
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\author 31028646 "henrik"
 \end_header
 
 \begin_body
@@ -179,8 +180,8 @@ literal "false"
 , can't explain any of these laws, as people live forever in the model,
  and so do not have a mortality rate.
  While it is possible to extend the model to encompass the laws of mortality,
- I will in instead review the (economic) empirical literature on model build
- 
+ I will in instead review the (economic) empirical literature on a model
+ build 
 \emph on
 from
 \emph default
@@ -266,11 +267,11 @@ noprefix "false"
 
 \end_inset
 
-which is only equal to 
+which is equal to 
 \begin_inset Formula $0$
 \end_inset
 
- if 
+ when 
 \begin_inset Formula $t\rightarrow\infty$
 \end_inset
 
@@ -434,10 +435,7 @@ It is then assumed that
 \end_inset
 
  is the returns to health investments.
-\end_layout
-
-\begin_layout Standard
-The Health Deficit Model is life-cycle models that use
+ The Health Deficit Model is then life-cycle models that use
 \begin_inset Formula 
 \begin{equation}
 \dot{D}\left(t\right)=\mu\left(D\left(t\right)-a-Ah\left(t\right)^{\gamma}\right)\label{eq:Health Deficit Model}
@@ -446,10 +444,7 @@ The Health Deficit Model is life-cycle models that use
 \end_inset
 
 for the evolution of health over the life-cycle.
-\end_layout
-
-\begin_layout Standard
-The various extensions of the model are build on a intertemporal optimizing
+ The various extensions of the model are build on a intertemporal optimizing
  representative individual with life-time utility according to 
 \begin_inset Formula 
 \begin{equation}
@@ -508,10 +503,7 @@ in which
 \end_inset
 
  is the price of health investments.
-\end_layout
-
-\begin_layout Standard
-The representative individual's problem is to maximize life-time utility,
+ The representative individual's problem is to maximize life-time utility,
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -842,7 +834,6 @@ noprefix "false"
 
 As the age increases, the deficit accumulations becomes increasingly, and
  unknowingly, volatile.
- Neither the plateau, nor the volatility is empirically validated for humans.
 \begin_inset Newline newline
 \end_inset
 
@@ -885,7 +876,7 @@ Deficit as a proxy for mortality
 \end_layout
 
 \begin_layout Standard
-Theoretical microfoundations are great for model calibrations, if there
+Theoretical micro-foundations are great for model calibrations, if there
  are high precision estimates of the parameters of the foundations.
  These parameters have been estimated and studied by 
 \begin_inset CommandInset citation
@@ -905,7 +896,8 @@ uted and is able to predict mortality with great precision.
 The Health Deficit Index is the sum of health deficits over the sum of potential
  deficits.
  Health deficits are all types of diseases, signs, symptoms, etc., and the
- potential deficits are all the deficits the individual has answered.
+ potential deficits are all the deficits the individual has answered yes
+ or no to having.
  They use data from the Canadian Study of Health and Aging, where they find
  that for 2194 elderly Canadians the distribution of the Health Deficit
  Index follows a Gamma-distribution, which is used in reliability theory
@@ -1108,10 +1100,6 @@ literal "false"
  Basically, it measures the share of deficits to potential deficits, where
  potential deficits are the number of deficits the survey-participant responds
  to.
-\end_layout
-
-\begin_layout Standard
-I will in the conclusion 
 \end_layout
 
 \begin_layout Subsection
@@ -1503,13 +1491,16 @@ where
  is a dummy variable.
  The first equation is estimated by OLS, random effects and Mundlak, and
  the second equation by non-linear least squares.
+ The paper improves upon the literature by showing how early life health
+ shocks, in the form of hunger episodes, are correlated with biological
+ aging.
 \end_layout
 
 \begin_layout Standard
 They use OLS, random effects and Mundlak regressions.
  They do not use fixed effects, because hunger episodes are constant across
  time per individual.
- They cluster the SE at country and year-of-birth level.
+ They cluster the standard errors at country and year-of-birth level.
  Clustering at country-level and year-of-birth-level makes sense according
  to the 
 \begin_inset CommandInset citation
@@ -1579,12 +1570,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-The paper improves upon the literature by showing how early life health
- shocks, in the form of hunger episodes, are correlated with biological
- aging.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1596,7 +1581,7 @@ status open
 \begin_inset Graphics
 	filename deficit_factor_convergence.png
 	lyxscale 60
-	scale 30
+	scale 25
 
 \end_inset
 
@@ -1669,10 +1654,6 @@ literal "false"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1925,8 +1906,6 @@ In the log-linear regressions they find that the season of birth determines
  However, most estimates aren't statistical significant at 5%.
  It makes sense that the effects are rather small, because it would be weird
  if humans had not evolved to tolerate seasons.
- However, it also makes sense that they aren't zero, because pregnant women
- might be consuming more nutritious food at different seasons.
  In the non-linear estimation results, however, they find a large effect
  for men born in the summer of 
 \begin_inset Formula $\gamma=0.07\Rightarrow e^{\gamma}=1.07251$
@@ -2059,8 +2038,8 @@ literal "false"
  Because the sample consists of 28,664 individuals, then if the external
  validity is low, if, say, the sample is different from the population,
  then the exclusion restriction is less likely to be violated.
- In other words, I will argue that there is a fundamental internal-external
- validity trade-off in this setting.
+ In other words, there might be a fundamental internal-external validity
+ trade-off in this setting.
 \end_layout
 
 \begin_layout Standard
@@ -2169,7 +2148,7 @@ name "fig:DAG_retirement"
 \begin_inset Newline newline
 \end_inset
 
-Directed Acyclic Graph (DAG) of the model.
+Directed (A)cyclic Graph (DAG) of the model.
 \begin_inset Newline newline
 \end_inset
 
@@ -2355,8 +2334,16 @@ where
 \end_inset
 
  was in at the time of the survey-interview.
- They estimate this equation by fixed effects and random (Mundlak) effects.As
- the variable of interest is 
+ They estimate this equation by fixed effects and random (Mundlak) effects.
+ 
+\change_inserted 31028646 1673542410
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 31028646 1673542402
+As the variable of interest is 
 \begin_inset Formula $age$
 \end_inset
 
@@ -2375,7 +2362,11 @@ where
 \end_inset
 
 .
- However, controlling for 
+ However, c
+\change_inserted 31028646 1673542402
+C
+\change_unchanged
+ontrolling for 
 \begin_inset Formula $region$
 \end_inset
 
@@ -2389,6 +2380,8 @@ where
 \end_inset
 
 .
+
+\change_deleted 31028646 1673542510
  Assume there are two regions 
 \begin_inset Formula $A$
 \end_inset
@@ -2406,7 +2399,9 @@ where
 \begin_inset Formula $B$
 \end_inset
 
- there are many: The 
+ there are many:
+\change_unchanged
+ The 
 \begin_inset Formula $region$
 \end_inset
 
